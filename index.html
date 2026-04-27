@@ -3,122 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S.P Wood Workers - Balangoda | වඩු වැඩ | Pantry, Doors, Windows</title>
-    <meta name="description" content="S.P Wood Workers Balangoda. උසස් තත්වයේ පැන්ට්‍රි කබඩ්, දොරවල්, ජනෙල්, අල්මාරි. අමතන්න 0767181514, 0774225797">
+    <title>S.P Wood Workers - 100% තේක්ක නිර්මාණ | Balangoda</title>
     <style>
-        body { font-family: 'Noto Sans Sinhala', Arial, sans-serif; margin: 0; background: #fdfdfd; color: #333; line-height: 1.7; }
-        .header { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?q=80&w=2080') center/cover; color: white; padding: 90px 20px; text-align: center; }
-        .header h1 { margin: 0; font-size: 3.2em; letter-spacing: 1px; }
-        .header p { font-size: 1.3em; opacity: 0.9; }
-        .section { padding: 60px 20px; max-width: 1100px; margin: auto; }
-        .section h2 { text-align: center; font-size: 2.4em; color: #5D4037; margin-bottom: 50px; }
-        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; text-align: center; }
-        .service-card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.07); }
-        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 18px; }
-        .gallery img { width: 100%; height: 280px; object-fit: cover; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s; }
-        .gallery img:hover { transform: scale(1.03); }
-        .contact { background: #3E2723; color: white; text-align: center; }
-        .contact h2 { color: white; }
-        .btn { background: #25D366; color: white; padding: 16px 40px; text-decoration: none; border-radius: 50px; font-weight: bold; display: inline-block; margin: 10px; font-size: 1.2em; transition: background 0.3s; }
-        .btn:hover { background: #1EBE57; }
-        .btn-call { background: #0275d8; }
-        .btn-call:hover { background: #025aa5; }
-        .map-container { margin-top: 40px; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
-        .footer { background: #212121; color: #aaa; text-align: center; padding: 25px; font-size: 0.95em; }
-        .footer a { color: #aaa; }
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;700;900&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Noto Sans Sinhala', sans-serif; 
+            background: #111; 
+            color: #fff;
+        }
+        .header {
+            background: linear-gradient(135deg, #5D4037, #8D6E63);
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .header h1 { font-size: 2.8rem; font-weight: 900; margin-bottom: 10px; }
+        .header p { font-size: 1.3rem; opacity: 0.9; }
+        .badge { 
+            background: #FFD700; 
+            color: #000; 
+            display: inline-block;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+            padding: 40px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            border: 3px solid #8D6E63;
+        }
+        .gallery img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s;
+        }
+        .gallery-item:hover img { transform: scale(1.05); }
+        .gallery-item .title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            padding: 20px 15px 15px;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        .cta {
+            text-align: center;
+            padding: 50px 20px;
+            background: #1c1c1c;
+        }
+        .cta h2 { font-size: 2rem; margin-bottom: 15px; }
+        .cta p { font-size: 1.2rem; margin-bottom: 25px; opacity: 0.9; }
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            padding: 20px 50px;
+            font-size: 1.4rem;
+            text-decoration: none;
+            border-radius: 50px;
+            display: inline-block;
+            font-weight: 700;
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+            transition: transform 0.2s;
+        }
+        .whatsapp-btn:hover { transform: scale(1.05); }
+        .footer {
+            text-align: center;
+            padding: 25px;
+            background: #000;
+            font-size: 1rem;
+        }
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2rem; }
+            .gallery { grid-template-columns: 1fr; padding: 20px 15px; }
+            .gallery img { height: 300px; }
+        }
     </style>
 </head>
 <body>
-    <!-- Hero Section Start -->
-<section style="height:90vh; min-height:600px; background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1616046229478-9901c5536a45'); background-size:cover; background-position:center; display:flex; align-items:center; justify-content:center; text-align:center; color:white; padding:20px;">
-  <div>
-    <h1 style="font-size:42px; margin:0 0 10px 0; font-weight:bold; line-height:1.2;">S.P Wood Workers</h1>
-    <h2 style="font-size:22px; margin:0 0 20px 0; font-weight:400;">Balangoda අවට විශ්වාසනීයම ලී වැඩ නිර්මාණ</h2>
-    <p style="font-size:18px; margin:0 0 30px 0; max-width:600px;">අවුරුදු 10+ පළපුරුද්ද සමගින් පැන්ට්‍රි කබඩ්, දොර-ජනෙල්, අල්මාරි ඔබේ නිවසටම</p>
-    <a href="https://wa.me/94767181514?text=ආයුබෝවන්%20S.P%20Wood%20Workers,%20Website%20එකෙන්%20ආවේ.%20විස්තර%20දැනගන්න%20ඕන" 
-       target="_blank" 
-       style="background:#25D366; color:white; padding:16px 32px; border-radius:8px; text-decoration:none; font-weight:bold; font-size:18px; display:inline-block;">
-       📲 නොමිලේ මිනුම් වෙන්කරවා ගන්න
-    </a>
-  </div>
-</section>
-<!-- Hero Section End -->
     <div class="header">
         <h1>S.P Wood Workers</h1>
-        <p>දශකයක පළපුරුද්දෙන්, ඔබේ නිවසට උසස්ම වඩු නිර්මාණ | Balangoda</p>
+        <p>100% තේක්ක නිර්මාණ | Balangoda - Rathnapura</p>
+        <div class="badge">අවුරුදු 30ක පළපුරුද්ද</div>
     </div>
-    
-    <div class="section">
-        <h2>අපගේ ප්‍රධාන සේවාවන්</h2>
-        <div class="services">
-            <div class="service-card">
-                <h3>පැන්ට්‍රි කබඩ්</h3>
-                <p>නවීන මුළුතැන්ගෙයට ගැලපෙන, ඉඩකඩ ප්‍රයෝජනයට ගන්නා ලෙස නිමවන පැන්ට්‍රි කබඩ්.</p>
-            </div>
-            <div class="service-card">
-                <h3>දොරවල් සහ ජනෙල්</h3>
-                <p>තේක්ක, මහෝගනී වැනි උසස් ලී වලින්, කල් පවතින දොරවල් සහ ජනෙල්.</p>
-            </div>
-            <div class="service-card">
-                <h3>අල්මාරි සහ ඇඳන්</h3>
-                <p>ඔබේ නිදන කාමරයට ගැලපෙනම නිර්මාණය, ඔබ කැමති මිනුමට.</p>
-            </div>
-            <div class="service-card">
-                <h3>සියලුම වඩු වැඩ</h3>
-                <p>ලී පඩිපෙළ, මේස, පුටු ඇතුළු ඕනෑම ලී බඩුවක් ඔබේ සිතැඟි පරිදි.</p>
-            </div>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="pantry1.jpg" alt="තේක්ක පැන්ට්‍රි කප්බෝඩ්">
+            <div class="title">තේක්ක පැන්ට්‍රි කබඩ්</div>
+        </div>
+        <div class="gallery-item">
+            <img src="pantry2.jpg" alt="Kitchen Wall Cupboard">
+            <div class="title">මුළුතැන්ගෙයි උඩ කබඩ්</div>
+        </div>
+        <div class="gallery-item">
+            <img src="pantry3.jpg" alt="Kitchen Sink Pantry">
+            <div class="title">Sink Pantry Unit</div>
+        </div>
+        <div class="gallery-item">
+            <img src="pantry4.jpg" alt="Full Pantry Set">
+            <div class="title">සම්පූර්ණ පැන්ට්‍රි සෙට්</div>
+        </div>
+        <div class="gallery-item">
+            <img src="stair1.jpg" alt="තේක්ක පඩිපෙල">
+            <div class="title">තේක්ක පඩිපෙල නිර්මාණ</div>
+        </div>
+        <div class="gallery-item">
+            <img src="stair2.jpg" alt="Staircase Handrail">
+            <div class="title">Handrail & Staircase</div>
+        </div>
+        <div class="gallery-item">
+            <img src="stair3.jpg" alt="Spiral Staircase">
+            <div class="title">වක්‍රාකාර පඩිපෙල</div>
+        </div>
+        <div class="gallery-item">
+            <img src="door1.jpg" alt="තේක්ක දොර ෆ්‍රේම්">
+            <div class="title">දොර ෆ්‍රේම් & ජනෙල්</div>
         </div>
     </div>
 
-    <div class="section">
-        <h2>අප අතින් නිමවුණු සැබෑ නිර්මාණ</h2>
-        <div class="gallery">
-            <img src="https://i.postimg.cc/LhD5h4jW/IMG-20241001-WA0013.jpg" alt="S.P Wood Workers - ප්‍රධාන දොර">
-            <img src="https://i.postimg.cc/BXvTnVPt/IMG-20241001-WA0014.jpg" alt="S.P Wood Workers - ලී අල්මාරිය">
-            <img src="https://i.postimg.cc/PLbp4W8q/IMG-20241001-WA0015.jpg" alt="S.P Wood Workers - වීදුරු සහිත දොර">
-            <img src="https://i.postimg.cc/Mcqm0Krw/IMG-20241001-WA0016.jpg" alt="S.P Wood Workers - පැන්ට්‍රි කබඩ්">
-        </div>
-    </div>
-
- <div class="section contact">
-        <h2>අප අමතන්න</h2>
-        <p>නිවසටම පැමිණ නොමිලේ මිනුම් ලබාගෙන, ඔබට ගැලපෙනම මිල ගණන් ලබා දෙමු.</p>
-        <a href="https://wa.me/94767181514" class="btn">WhatsApp 076 718 1514</a>
-        <a href="tel:+94774225797" class="btn btn-call">Call 077 422 5797</a>
-        <p style="margin-top: 25px; font-size: 1.1em;">සේවා සපයන ප්‍රදේශ: Balangoda, Ratnapura සහ අවට</p>
-        <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63362.77648931446!2d80.62209652167968!3d6.654468100000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3d9a8a7e9b9b9%3A0x9b8b8b8b!2sBalangoda!5e0!3m2!1sen!2slk!4v1700000000000" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
+    <div class="cta">
+        <h2>ඔබේ ගෙදරටත් මෙහෙම 100% තේක්ක වැඩයක් ඕනද?</h2>
+        <p>✅ නොමිලේ මිනුම් බලන්න එනවා | ✅ අවුරුදු 5 වගකීම | ✅ මාසෙකට Orders 5යි</p>
+        <a href="https://wa.me/94767181514?text=ආයුබෝවන්%20S.P%20Wood%20Workers,%20Website%20එකේ%20Gallery%20බලලා%20Msg%20කරේ.%20Quotation%20එකක්%20ඕන." class="whatsapp-btn">
+            📲 WhatsApp දැන්ම
+        </a>
+        <p style="margin-top:20px; font-size: 1.3rem;">076 718 1514</p>
     </div>
 
     <div class="footer">
-        <p>S.P Wood Workers © 2026 | Balangoda, Sri Lanka</p>
-        <p><a href="https://maps.app.goo.gl/bJQedVbrxMLuudNH9" target="_blank">Google Maps හි බලන්න</a></p>
+        © 2026 S.P Wood Workers | Balangoda | 100% තේක්ක සහතිකය
     </div>
-          </div>
-   </div>
-
-<a href="https://wa.me/94767181514?text=ආයුබෝවන්%20S.P%20Wood%20Workers,%20මට%20ලී%20වැඩ%20ගැන%20විස්තර%20දැනගන්න%20ඕන" 
-   target="_blank" 
-   style="position:fixed; bottom:20px; right:20px; background:#25D366; color:white; padding:15px 20px; border-radius:50px; text-decoration:none; font-weight:bold; box-shadow: 0 4px 8px rgba(0,0,0,0.2); z-index:999;">
-   🟢 WhatsApp Chat
-</a>
-
-</body>
-    <!-- Hero Section Start -->
-<section style="height:90vh; min-height:600px; background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1616046229478-9901c5536a45'); background-size:cover; background-position:center; display:flex; align-items:center; justify-content:center; text-align:center; color:white; padding:20px;">
-  <div>
-    <h1 style="font-size:42px; margin:0 0 10px 0; font-weight:bold; line-height:1.2;">S.P Wood Workers</h1>
-    <h2 style="font-size:22px; margin:0 0 20px 0; font-weight:400;">Balangoda අවට විශ්වාසනීයම ලී වැඩ නිර්මාණ</h2>
-    <p style="font-size:18px; margin:0 0 30px 0; max-width:600px;">අවුරුදු 10+ පළපුරුද්ද සමගින් පැන්ට්‍රි කබඩ්, දොර-ජනෙල්, අල්මාරි ඔබේ නිවසටම</p>
-<a href="https://wa.me/94767181514?text=ආයුබෝවන්%20S.P%20Wood%20Workers,%20Website%20එකෙන්%20ආවේ.%20විස්තර%20දැනගන්න%20ඕන" 
-   target="_blank" 
-   style="background:#25D366; color:white; padding:16px 32px; border-radius:8px; text-decoration:none; font-weight:bold; font-size:18px; display:inline-block; white-space:nowrap;">
-   📲 නොමිලේ මිනුම් ලබාගන්න
-</a>
-  </div>
-</section>
-<!-- Hero Section End -->
-</html>
 </body>
 </html>
