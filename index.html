@@ -7,123 +7,35 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;700;900&display=swap');
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Noto Sans Sinhala', sans-serif; 
-            background: #FFFFFF; 
-            color: #2C1810;
-        }
-        .hero {
-            background: linear-gradient(135deg, #5D4037, #8D6E63);
-            padding: 50px 20px;
-            text-align: center;
-            color: #fff;
-        }
-        .hero h1 { font-size: 2.8rem; font-weight: 900; margin-bottom: 10px; }
-        .hero p { font-size: 1.3rem; opacity: 0.9; margin-bottom: 20px; }
-        .badge { 
-            background: #FFD700; 
-            color: #000; 
-            display: inline-block;
-            padding: 10px 25px;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 1.1rem;
-        }
-        .offer {
-            text-align: center;
-            padding: 30px 20px;
-            background: #F5F5F5;
-        }
-        .offer h2 { color: #2C1810; font-size: 24px; margin-bottom: 10px; }
-        .offer .features {
-            background: #FFFFFF; padding: 15px; border-radius: 8px; margin: 20px auto;
-            text-align: left; display: inline-block; border: 2px solid #8D6E63;
-        }
-        .offer .features p { color: #2C1810; font-size: 16px; margin: 8px 0; font-weight: 600; }
+        body { font-family: 'Noto Sans Sinhala', sans-serif; background: #FFFFFF; color: #2C1810; }
+        .hero { background: linear-gradient(135deg, #5D4037, #8D6E63); padding: 50px 20px; text-align: center; color: #fff; }
+        .hero h1 { font-size: 2.5rem; font-weight: 900; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; opacity: 0.9; margin-bottom: 20px; }
+        .badge { background: #FFD700; color: #000; display: inline-block; padding: 10px 25px; border-radius: 50px; font-weight: 700; font-size: 1.1rem; }
+        .offer { text-align: center; padding: 30px 20px; background: #F5F5F5; }
+        .offer h2 { color: #2C1810; font-size: 24px; margin-bottom: 15px; }
+        .features { background: #FFFFFF; padding: 15px; border-radius: 8px; margin: 20px auto; text-align: left; display: inline-block; border: 2px solid #8D6E63; }
+        .features p { color: #2C1810; font-size: 16px; margin: 8px 0; font-weight: 600; }
         .scarcity { color: #D32F2F; font-size: 15px; margin: 20px 0; font-weight: 700; }
-        .gallery-section {
-            padding: 50px 20px;
-            text-align: center;
-        }
+        .whatsapp-btn { background: #25D366; color: white; padding: 18px 40px; font-size: 1.3rem; text-decoration: none; border-radius: 50px; display: inline-block; font-weight: 700; box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4); }
+        .gallery-section { padding: 50px 15px; text-align: center; }
         .gallery-section h2 { color: #2C1810; font-size: 32px; margin: 0 0 10px 0; font-weight: 800; }
         .gallery-section p { color: #5D4037; font-size: 18px; margin: 0 0 40px 0; }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 12px;
-            border: 3px solid #8D6E63;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        .gallery img {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.4s;
-        }
-        .gallery-item:hover img { transform: scale(1.05); }
-        .gallery-item .title {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,0.9));
-            padding: 20px 15px 15px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: #FFFFFF;
-        }
-        .cta {
-            text-align: center;
-            padding: 50px 20px;
-            background: #1c1c1c;
-            color: #fff;
-        }
-        .cta h2 { font-size: 2rem; margin-bottom: 15px; }
-        .cta p { font-size: 1.2rem; margin-bottom: 25px; opacity: 0.9; }
-        .whatsapp-btn {
-            background: #25D366;
-            color: white;
-            padding: 20px 50px;
-            font-size: 1.4rem;
-            text-decoration: none;
-            border-radius: 50px;
-            display: inline-block;
-            font-weight: 700;
-            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
-            transition: transform 0.2s;
-        }
-        .whatsapp-btn:hover { transform: scale(1.05); }
-        .footer {
-            text-align: center;
-            padding: 25px;
-            background: #000;
-            font-size: 1rem;
-            color: #fff;
-        }
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .gallery { grid-template-columns: 1fr; padding: 20px 15px; }
-            .gallery img { height: 280px; }
-        }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
+        .gallery-item { border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 3px solid #8D6E63; }
+        .gallery img { width: 100%; height: 320px; object-fit: cover; display: block; }
+        .gallery-item .title { background: #2C1810; padding: 15px; font-weight: 700; font-size: 1rem; color: #FFFFFF; }
+        .footer { text-align: center; padding: 25px; background: #000; font-size: 1rem; color: #fff; }
+        @media (max-width: 768px) { .hero h1 { font-size: 2rem; } .gallery { grid-template-columns: 1fr; } .gallery img { height: 280px; } }
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
     <div class="hero">
         <h1>🪚 S.P WOOD CRAFTSMEN 🪚</h1>
         <p>100% තේක්ක ලී වැඩ | බළන්ගොඩින් ඔබේ නිවසට</p>
         <div class="badge">1996 සිට විශ්වාසය</div>
     </div>
 
-    <!-- Offer Section -->
     <div class="offer">
         <h2>"ඔබේ නිවසටත් තේක්ක ගැම්මක් ඕනද?"</h2>
         <div class="features">
@@ -131,13 +43,67 @@
             <p>✅ අවුරුදු 5ක ලිඛිත වගකීමක්</p>
         </div>
         <p class="scarcity">⚠️ මාසෙට සීමිත Orders පමණයි</p>
-        <a href="https://wa.me/94767181514?text=ආයුබෝවන්%20S.P%20Wood%20Craftsmen%2C%20මට%20තේක්ක%20වැඩක්%20කරගන්න%20ඕන" 
-           target="_blank" class="whatsapp-btn">
-            🟢 දැන්ම WhatsApp කරන්න
-        </a>
+        <a href="https://wa.me/94767181514?text=ආයුබෝවන්%20S.P%20Wood%20Craftsmen%2C%20මට%20තේක්ක%20වැඩක්%20කරගන්න%20ඕන" target="_blank" class="whatsapp-btn">🟢 දැන්ම WhatsApp කරන්න</a>
     </div>
 
-    <!-- Gallery Section -->
     <div class="gallery-section">
         <h2>අපි කරපු තේක්ක නිර්මාණ</h2>
-       
+        <p>1996 සිට බළන්ගොඩ සහ අවට අපේ අත්දැකීම් 👇</p>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="door-design-1.jpg" alt="තේක්ක ප්‍රධාන දොර">
+                <div class="title">ප්‍රධාන දොර - Modern Glass</div>
+            </div>
+            <div class="gallery-item">
+                <img src="door-design-2.jpg" alt="තේක්ක දොර">
+                <div class="title">සාලයේ දොර - 4 Panels</div>
+            </div>
+            <div class="gallery-item">
+                <img src="door-design-3.jpg" alt="තේක්ක දොර">
+                <div class="title">ප්‍රධාන දොර - Classic</div>
+            </div>
+            <div class="gallery-item">
+                <img src="pantry1.jpg" alt="තේක්ක පැන්ට්‍රි කබඩ්">
+                <div class="title">තේක්ක පැන්ට්‍රි කබඩ්</div>
+            </div>
+            <div class="gallery-item">
+                <img src="pantry2.jpg" alt="Kitchen Wall Cupboard">
+                <div class="title">මුළුතැන්ගෙයි උඩ කබඩ්</div>
+            </div>
+            <div class="gallery-item">
+                <img src="pantry3.jpg" alt="Kitchen Sink Pantry">
+                <div class="title">Sink Pantry Unit</div>
+            </div>
+            <div class="gallery-item">
+                <img src="partition-1.jpg" alt="තේක්ක Partition">
+                <div class="title">සාලය/කුස්සිය Partition</div>
+            </div>
+            <div class="gallery-item">
+                <img src="roof-1.jpg" alt="තේක්ක වහල">
+                <div class="title">තේක්ක වහල නිර්මාණ</div>
+            </div>
+            <div class="gallery-item">
+                <img src="wardrobe-1.jpg" alt="තේක්ක ඇඳුම් කබඩ්">
+                <div class="title">ඇඳුම් කබඩ් - Full Height</div>
+            </div>
+            <div class="gallery-item">
+                <img src="window-1.jpg" alt="තේක්ක ජනෙල්">
+                <div class="title">තේක්ක ජනෙල් Frame</div>
+            </div>
+            <div class="gallery-item">
+                <img src="stair2.jpg" alt="Staircase Handrail">
+                <div class="title">Handrail & Staircase</div>
+            </div>
+            <div class="gallery-item">
+                <img src="stair3.jpg" alt="Spiral Staircase">
+                <div class="title">වක්‍රාකාර පඩිපෙල</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        © 2026 S.P Wood Craftsmen | Balangoda | 100% තේක්ක සහතිකය | 0767181514
+    </div>
+</body>
+</html>
