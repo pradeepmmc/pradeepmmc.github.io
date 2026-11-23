@@ -1,127 +1,223 @@
 <!DOCTYPE html>
 <html lang="si">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S.P Wood Craftsmen - 100% තේක්ක නිර්මාණ | Balangoda</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;700;900&display=swap');
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Noto Sans Sinhala', sans-serif; background: #FFFFFF; color: #2C1810; }
-        .hero { background: linear-gradient(135deg, #5D4037, #8D6E63); padding: 50px 20px; text-align: center; color: #fff; }
-        .hero h1 { font-size: 2.5rem; font-weight: 900; margin-bottom: 10px; }
-        .hero p { font-size: 1.2rem; opacity: 0.9; margin-bottom: 20px; }
-        .badge { background: #FFD700; color: #000; display: inline-block; padding: 10px 25px; border-radius: 50px; font-weight: 700; font-size: 1.1rem; }
-        .offer { text-align: center; padding: 30px 20px; background: #F5F5F5; }
-        .offer h2 { color: #2C1810; font-size: 24px; margin-bottom: 15px; }
-        .features { background: #FFFFFF; padding: 15px; border-radius: 8px; margin: 20px auto; text-align: left; display: inline-block; border: 2px solid #8D6E63; }
-        .features p { color: #2C1810; font-size: 16px; margin: 8px 0; font-weight: 600; }
-        .scarcity { color: #D32F2F; font-size: 15px; margin: 20px 0; font-weight: 700; }
-        .whatsapp-btn { background: #25D366; color: white; padding: 18px 40px; font-size: 1.3rem; text-decoration: none; border-radius: 50px; display: inline-block; font-weight: 700; box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4); }
-        .gallery-section { padding: 50px 15px; text-align: center; }
-        .gallery-section h2 { color: #2C1810; font-size: 32px; margin: 0 0 10px 0; font-weight: 800; }
-        .gallery-section p { color: #5D4037; font-size: 18px; margin: 0 0 40px 0; }
-        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
-        .gallery-item { border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 3px solid #8D6E63; }
-        .gallery img { width: 100%; height: 320px; object-fit: cover; display: block; }
-        .gallery-item .title { background: #2C1810; padding: 15px; font-weight: 700; font-size: 1rem; color: #FFFFFF; }
-        .footer { text-align: center; padding: 25px; background: #000; font-size: 1rem; color: #fff; }
-        @media (max-width: 768px) { .hero h1 { font-size: 2rem; } .gallery { grid-template-columns: 1fr; } .gallery img { height: 280px; } }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#17110d">
+<meta name="description" content="S.P Wood Craftsmen - 1996 සිට බළන්ගොඩින් 100% තේක්ක ලී නිර්මාණ. දොරවල්, ජනෙල්, පැන්ට්‍රි, වහල සහ තවත් නිර්මාණ.">
+<title>S.P Wood Craftsmen | Luxury Teak Wood Creations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#100d0a;--panel:#1b1510;--panel2:#241a13;--gold:#d8b36a;--gold2:#f1d99c;--cream:#f4ead8;--muted:#b9a990;--line:rgba(216,179,106,.25);--green:#25d366}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans Sinhala','Nirmala UI','Iskoola Pota',sans-serif;background:var(--bg);color:var(--cream);line-height:1.7;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.container{width:min(1160px,92%);margin:auto}
+.topline{height:3px;background:linear-gradient(90deg,transparent,var(--gold),var(--gold2),var(--gold),transparent)}
+header{position:absolute;top:3px;left:0;width:100%;z-index:20;border-bottom:1px solid rgba(255,255,255,.1);background:linear-gradient(180deg,rgba(12,9,7,.78),transparent)}
+.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-mark{width:43px;height:43px;border:1px solid var(--gold);display:grid;place-items:center;color:var(--gold);font-family:Georgia,serif;font-size:19px;transform:rotate(45deg);box-shadow:0 0 24px rgba(216,179,106,.12)}
+.brand-mark span{transform:rotate(-45deg)}
+.brand-name{font-weight:900;letter-spacing:1.4px;font-size:15px}
+.brand-sub{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:13px;letter-spacing:3px}
+.navlinks{display:flex;gap:27px;align-items:center;font-size:13px;color:#e9ddca}
+.navlinks a{transition:.25s}
+.navlinks a:hover{color:var(--gold2)}
+.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 22px;border:1px solid var(--gold);border-radius:2px;background:linear-gradient(135deg,#e7ca8a,#b68a43);color:#21160c;font-weight:800;box-shadow:0 10px 28px rgba(0,0,0,.25);transition:transform .3s,box-shadow .3s}
+.nav-cta:hover,.btn:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(216,179,106,.25)}
+.menu-toggle{display:none;background:none;border:1px solid var(--line);color:var(--gold);padding:8px 12px}
+.hero{min-height:790px;display:flex;align-items:center;position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(90deg,rgba(13,9,6,.94) 0%,rgba(13,9,6,.75) 46%,rgba(13,9,6,.25) 100%),url('door-design-1.jpg') center/cover no-repeat}
+.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 75% 48%,rgba(214,169,91,.23),transparent 42%),linear-gradient(0deg,var(--bg),transparent 28%)}
+.hero:after{content:"";position:absolute;right:-10%;top:14%;width:55vw;height:55vw;border:1px solid rgba(216,179,106,.18);border-radius:50%;box-shadow:0 0 0 35px rgba(216,179,106,.025),0 0 0 75px rgba(216,179,106,.02);z-index:-1}
+.hero-content{padding:155px 0 110px;max-width:690px;position:relative;z-index:2}
+.eyebrow{color:var(--gold);letter-spacing:4px;text-transform:uppercase;font:600 13px 'Cormorant Garamond',serif;display:flex;align-items:center;gap:13px}
+.eyebrow:before{content:"";width:42px;height:1px;background:var(--gold)}
+.hero h1{font-size:clamp(37px,6vw,72px);line-height:1.2;font-weight:900;margin:22px 0 18px;text-shadow:0 8px 35px rgba(0,0,0,.55)}
+.hero h1 em{font-family:'Cormorant Garamond',serif;font-weight:600;color:var(--gold2);font-size:1.12em;letter-spacing:1px}
+.hero p{max-width:560px;color:#e2d4c0;font-size:clamp(15px,1.8vw,19px);margin-bottom:28px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn-outline{background:rgba(20,14,9,.35);color:var(--cream);border:1px solid rgba(241,217,156,.65);box-shadow:none}
+.trust-row{display:flex;gap:28px;flex-wrap:wrap;margin-top:48px;color:#d7c7ae;font-size:13px}
+.trust-row strong{display:block;color:var(--gold2);font:700 26px 'Cormorant Garamond',serif}
+.hero-stamp{position:absolute;right:9%;bottom:16%;width:150px;height:150px;border:1px solid rgba(241,217,156,.65);border-radius:50%;display:grid;place-items:center;text-align:center;color:var(--gold2);font:600 17px 'Cormorant Garamond',serif;transform:rotate(-12deg);background:rgba(22,15,9,.38);backdrop-filter:blur(5px);box-shadow:0 0 45px rgba(0,0,0,.25)}
+.hero-stamp small{display:block;font:10px 'Noto Sans Sinhala';letter-spacing:2px}
+section{padding:100px 0}
+.section-head{text-align:center;max-width:720px;margin:0 auto 48px}
+.kicker{color:var(--gold);font:600 13px 'Cormorant Garamond',serif;letter-spacing:4px;text-transform:uppercase}
+.section-head h2{font-size:clamp(27px,4vw,43px);line-height:1.35;margin:10px 0;color:var(--cream)}
+.section-head p{color:var(--muted);font-size:15px}
+.intro{background:linear-gradient(180deg,#100d0a,#17110d)}
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.intro-image{position:relative;perspective:1000px}
+.intro-image img{width:100%;height:470px;object-fit:cover;border:1px solid var(--line);box-shadow:22px 22px 0 rgba(216,179,106,.08);transform:rotateY(-5deg);transition:.5s}
+.intro-image:hover img{transform:rotateY(0) translateY(-5px)}
+.intro-image:after{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid var(--line);pointer-events:none}
+.intro-copy h2{font-size:clamp(27px,4vw,42px);line-height:1.4;margin:12px 0 20px}
+.intro-copy p{color:var(--muted);margin-bottom:18px}
+.promise{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin:28px 0}
+.promise div{padding:17px;border:1px solid var(--line);background:rgba(255,255,255,.025)}
+.promise b{display:block;color:var(--gold2);font-size:14px;margin-bottom:4px}
+.promise span{color:var(--muted);font-size:12px}
+.gallery-section{background:#0d0a08}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.gallery-card{background:linear-gradient(145deg,#261b13,#120e0b);border:1px solid var(--line);padding:9px;position:relative;transform-style:preserve-3d;transition:transform .35s,box-shadow .35s}
+.gallery-card:hover{transform:translateY(-9px) rotateX(2deg) rotateY(-2deg);box-shadow:0 25px 45px rgba(0,0,0,.45),0 0 25px rgba(216,179,106,.12)}
+.gallery-card img{display:block;width:100%;height:285px;object-fit:cover;filter:saturate(.88);transition:filter .35s}
+.gallery-card:hover img{filter:saturate(1.08)}
+.gallery-card .caption{padding:17px 13px 13px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.gallery-card h3{font-size:15px;font-weight:700}
+.gallery-card .number{font:600 20px 'Cormorant Garamond',serif;color:var(--gold)}
+.gallery-card:after{content:"";position:absolute;inset:0;border:1px solid transparent;pointer-events:none;transition:.3s}
+.gallery-card:hover:after{inset:5px;border-color:rgba(241,217,156,.35)}
+.why{background:linear-gradient(135deg,#21170f,#100d0a)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.why-card{padding:30px 25px;border:1px solid var(--line);background:rgba(255,255,255,.025);text-align:center;transition:.3s}
+.why-card:hover{background:rgba(216,179,106,.07);transform:translateY(-6px)}
+.why-icon{font-size:30px;color:var(--gold);margin-bottom:12px}
+.why-card h3{font-size:17px;margin-bottom:9px}
+.why-card p{font-size:13px;color:var(--muted)}
+.contact{background:radial-gradient(ellipse at center,rgba(115,77,37,.28),transparent 65%),#100d0a;text-align:center}
+.contact-panel{max-width:850px;margin:auto;padding:55px 25px;border:1px solid rgba(216,179,106,.4);background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.01));box-shadow:0 25px 80px rgba(0,0,0,.3);position:relative}
+.contact-panel:before,.contact-panel:after{content:"✦";position:absolute;color:var(--gold);font-size:20px}
+.contact-panel:before{top:15px;left:20px}.contact-panel:after{bottom:15px;right:20px}
+.contact-panel h2{font-size:clamp(27px,4vw,42px);margin:12px 0}
+.contact-panel p{color:var(--muted);margin-bottom:25px}
+.contact-actions{display:flex;justify-content:center;gap:13px;flex-wrap:wrap}
+footer{padding:28px 15px;text-align:center;background:#080706;color:#9f907c;font-size:12px;border-top:1px solid var(--line)}
+footer strong{color:var(--gold2)}
+.floating-wa{position:fixed;right:22px;bottom:22px;z-index:50;background:var(--green);color:#062b14;border-radius:50px;padding:14px 19px;font-weight:800;font-size:13px;box-shadow:0 10px 30px rgba(0,0,0,.4);animation:pulse 2.2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,.35),0 10px 30px rgba(0,0,0,.4)}50%{box-shadow:0 0 0 12px rgba(37,211,102,0),0 10px 30px rgba(0,0,0,.4)}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:850px){.navlinks{display:none;position:absolute;top:81px;left:0;right:0;background:#17110d;padding:22px;flex-direction:column;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.menu-toggle{display:block}.nav-cta{display:none}.hero{min-height:700px;background-position:60% center}.hero-stamp{right:5%;bottom:8%;width:112px;height:112px;font-size:14px}.intro-grid{grid-template-columns:1fr;gap:42px}.intro-image{max-width:650px}.gallery-grid{grid-template-columns:repeat(2,1fr)}.why-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.nav{height:72px}.brand-name{font-size:12px}.brand-sub{font-size:11px}.hero{min-height:740px}.hero-content{padding-top:130px}.hero-stamp{display:none}.trust-row{gap:18px}.trust-row strong{font-size:22px}section{padding:75px 0}.gallery-grid{grid-template-columns:1fr}.gallery-card img{height:270px}.why-grid{grid-template-columns:1fr}.promise{grid-template-columns:1fr}.intro-image img{height:330px}.floating-wa{right:12px;bottom:12px;padding:12px 15px;font-size:11px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
 </head>
 <body>
-    <div class="hero">
-        <h1>🪚 S.P WOOD CRAFTSMEN 🪚</h1>
-        <p>100% තේක්ක ලී වැඩ | බළන්ගොඩින් ඔබේ නිවසට</p>
-        <div class="badge">1996 සිට විශ්වාසය</div>
-    </div>
+<div class="topline"></div>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="S.P Wood Craftsmen home">
+      <div class="brand-mark"><span>SP</span></div>
+      <div><div class="brand-name">S.P WOOD CRAFTSMEN</div><div class="brand-sub">TEAK • CRAFT • LEGACY</div></div>
+    </a>
+    <nav class="navlinks" id="navlinks">
+      <a href="#home">මුල් පිටුව</a><a href="#about">අප ගැන</a><a href="#gallery">අපේ නිර්මාණ</a><a href="#contact">සම්බන්ධ වන්න</a>
+    </nav>
+    <a class="nav-cta" href="https://wa.me/94767181514?text=ආයුබෝවන්%20S.P%20Wood%20Craftsmen%2C%20මට%20තේක්ක%20වැඩක්%20කරගන්න%20ඕන" target="_blank" rel="noopener">WhatsApp ↗</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="මෙනුව විවෘත කරන්න">☰</button>
+  </div>
+</header>
 
-    <div class="offer">
-        <h2>"ඔබේ නිවසටත් තේක්ක ගැම්මක් ඕනද?"</h2>
-        <div class="features">
-            <p>✅ නිවසටම ඇවිත් නොමිලේ මිනුම්</p>
-            <p>✅ අවුරුදු 5ක ලිඛිත වගකීමක්</p>
-        </div>
-        <p class="scarcity">⚠️ මාසෙට සීමිත Orders පමණයි</p>
-        <a href="https://wa.me/94767181514?text=ආයුබෝවන්%20S.P%20Wood%20Craftsmen%2C%20මට%20තේක්ක%20වැඩක්%20කරගන්න%20ඕන" target="_blank" class="whatsapp-btn">🟢 දැන්ම WhatsApp කරන්න</a>
+<main>
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+      <div class="eyebrow">SINCE 1996 · BALANGODA</div>
+      <h1>කාලයත් සමඟ<br><em>වටිනාකම වැඩිවන</em><br>තේක්ක නිර්මාණ.</h1>
+      <p>ඔබේ නිවසේ අලංකාරයට, ශක්තියට සහ දිගුකාලීන වටිනාකමට — අත්දැකීම් සහිත නිමාවකින් යුත් තේක්ක ලී වැඩ.</p>
+      <div class="hero-actions">
+        <a class="btn" href="https://wa.me/94767181514?text=ආයුබෝවන්%20S.P%20Wood%20Craftsmen%2C%20මට%20තේක්ක%20වැඩක්%20කරගන්න%20ඕන" target="_blank" rel="noopener">🟢 දැන් විමසන්න</a>
+        <a class="btn btn-outline" href="#gallery">නිර්මාණ බලන්න ↓</a>
+      </div>
+      <div class="trust-row">
+        <div><strong>1996</strong>සිට අත්දැකීම්</div>
+        <div><strong>100%</strong>තේක්ක ලී නිර්මාණ</div>
+        <div><strong>5 වසර</strong>ලිඛිත වගකීම*</div>
+      </div>
     </div>
+    <div class="hero-stamp"><div>CRAFTED<br>WITH CARE<small>EST. 1996</small></div></div>
+  </div>
+</section>
 
-    <div class="gallery-section">
-        <h2>අපි කරපු තේක්ක නිර්මාණ</h2>
-        <p>1996 සිට බළන්ගොඩ සහ අවට අපේ අත්දැකීම් 👇</p>
-        
-        <div class="gallery">
-            <div class="gallery-item">
-                <img src="door-design-1.jpg" alt="තේක්ක ප්‍රධාන දොර">
-                <div class="title">ප්‍රධාන දොර - Modern Glass</div>
-            </div>
-            <div class="gallery-item">
-                <img src="door-design-2.jpg" alt="තේක්ක දොර">
-                <div class="title">සාලයේ දොර - 4 Panels</div>
-            </div>
-            <div class="gallery-item">
-                <img src="door-design-3.jpg" alt="තේක්ක දොර">
-                <div class="title">ප්‍රධාන දොර - Classic</div>
-            </div>
-            <div class="gallery-item">
-                <img src="pantry1.jpg" alt="තේක්ක පැන්ට්‍රි කබඩ්">
-                <div class="title">තේක්ක පැන්ට්‍රි කබඩ්</div>
-            </div>
-            <div class="gallery-item">
-                <img src="pantry2.jpg" alt="Kitchen Wall Cupboard">
-                <div class="title">මුළුතැන්ගෙයි උඩ කබඩ්</div>
-            </div>
-            <div class="gallery-item">
-                <img src="pantry3.jpg" alt="Kitchen Sink Pantry">
-                <div class="title">Sink Pantry Unit</div>
-            </div>
-            <div class="gallery-item">
-                <img src="partition-1.jpg" alt="තේක්ක Partition">
-                <div class="title">සාලය/කුස්සිය Partition</div>
-            </div>
-            <div class="gallery-item">
-                <img src="roof-1.jpg" alt="තේක්ක වහල">
-                <div class="title">තේක්ක වහල නිර්මාණ</div>
-            </div>
-            <div class="gallery-item">
-                <img src="wardrobe-1.jpg" alt="තේක්ක ඇඳුම් කබඩ්">
-                <div class="title">ඇඳුම් කබඩ් - Full Height</div>
-            </div>
-            <div class="gallery-item">
-                <img src="window-1.jpg" alt="තේක්ක ජනෙල්">
-                <div class="title">තේක්ක ජනෙල් Frame</div>
-            </div>
-            <div class="gallery-item">
-                <img src="stair2.jpg" alt="Staircase Handrail">
-                <div class="title">Handrail & Staircase</div>
-            </div>
-            <div class="gallery-item">
-                <img src="stair3.jpg" alt="Spiral Staircase">
-                <div class="title">වක්‍රාකාර පඩිපෙල</div>
-            </div>
-        </div>
+<section class="intro" id="about">
+  <div class="container intro-grid">
+    <div class="intro-image reveal"><img src="door-design-2.jpg" alt="S.P Wood Craftsmen තේක්ක දොර නිර්මාණයක්"></div>
+    <div class="intro-copy reveal">
+      <div class="kicker">OUR CRAFT · OUR PROMISE</div>
+      <h2>ඔබේ නිවසටත්<br><span style="color:var(--gold2)">තේක්ක ගැම්මක්</span> ඕනද?</h2>
+      <p>බළන්ගොඩ සිට ඔබේ නිවසටම ගැළපෙන තේක්ක දොරවල්, ජනෙල්, පැන්ට්‍රි කබඩ් සහ තවත් ලී නිර්මාණ — ඔබේ අවශ්‍යතාවයට අනුව.</p>
+      <div class="promise">
+        <div><b>✓ නොමිලේ මිනුම්</b><span>නිවසටම පැමිණ මිනුම් ලබාගැනීම</span></div>
+        <div><b>✓ අවුරුදු 5ක වගකීම</b><span>ලිඛිත වගකීමේ කොන්දේසි අදාළ වේ</span></div>
+        <div><b>✓ 1996 සිට අත්දැකීම්</b><span>වසර ගණනක වෘත්තීය පළපුරුද්ද</span></div>
+        <div><b>✓ ඔබේ සැලසුමට අනුව</b><span>අවශ්‍යතාවයට ගැළපෙන නිර්මාණ</span></div>
+      </div>
+      <a class="btn" href="https://wa.me/94767181514?text=ආයුබෝවන්%20ප්‍රදීප්,%20මට%20තේක්ක%20වැඩක්%20ගැන%20විමසන්න%20ඕන" target="_blank" rel="noopener">ඔබේ වැඩේ ගැන කතා කරමු ↗</a>
     </div>
+  </div>
+</section>
 
-    <div class="footer">
-        © 2026 S.P Wood Craftsmen | Balangoda | 100% තේක්ක සහතිකය | 0767181514
+<section class="gallery-section" id="gallery">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="kicker">SELECTED WORKS</div>
+      <h2>අපේ තේක්ක නිර්මාණ එකතුව</h2>
+      <p>අපගේ වැඩ කිහිපයක් — ඔබේ නිවසට ගැළපෙන නිර්මාණය තෝරාගන්න.</p>
     </div>
-<!-- Pradeep Floating WhatsApp Button | Powered by S.P WOOD CRAFTSMEN -->
-<a href="https://wa.me/94767181514?text=ආයුබෝවන්%20ප්‍රදීප්,%20Website%20එකෙන්%20ආවේ%20🪚%20තේක්ක%20දොර%20ජනෙල්%20ගැන%20දැනගන්න%20ඕන"
-   target="_blank"
-   style="position:fixed; bottom:20px; right:20px; z-index:9999;
-   background:#25D366; color:white; padding:16px 22px;
-   border-radius:50px; text-decoration:none; font-weight:bold;
-   box-shadow: 0 4px 12px rgba(0,0,0,0.4); font-family:'Iskoola Pota',sans-serif;
-   font-size:16px; animation: pulse 2s infinite;">
-   🪚 මාත් එක්ක චැට් කරලා වැඩි විස්තර දැනගන්න
-</a>
-<style>
-@keyframes pulse { 0% {transform: scale(1);} 50% {transform: scale(1.05);} 100% {transform: scale(1);} }
-</style>
+    <div class="gallery-grid">
+      <article class="gallery-card reveal"><img src="door-design-1.jpg" alt="තේක්ක ප්‍රධාන දොර"><div class="caption"><h3>ප්‍රධාන දොර · Modern Glass</h3><span class="number">01</span></div></article>
+      <article class="gallery-card reveal"><img src="door-design-2.jpg" alt="තේක්ක සාලයේ දොර"><div class="caption"><h3>සාලයේ දොර · 4 Panels</h3><span class="number">02</span></div></article>
+      <article class="gallery-card reveal"><img src="door-design-3.jpg" alt="Classic තේක්ක ප්‍රධාන දොර"><div class="caption"><h3>ප්‍රධාන දොර · Classic</h3><span class="number">03</span></div></article>
+      <article class="gallery-card reveal"><img src="pantry1.jpg" alt="තේක්ක පැන්ට්‍රි කබඩ්"><div class="caption"><h3>තේක්ක පැන්ට්‍රි කබඩ්</h3><span class="number">04</span></div></article>
+      <article class="gallery-card reveal"><img src="pantry2.jpg" alt="මුළුතැන්ගෙයි උඩ කබඩ්"><div class="caption"><h3>මුළුතැන්ගෙයි උඩ කබඩ්</h3><span class="number">05</span></div></article>
+      <article class="gallery-card reveal"><img src="pantry3.jpg" alt="Kitchen Sink Pantry"><div class="caption"><h3>Sink Pantry Unit</h3><span class="number">06</span></div></article>
+      <article class="gallery-card reveal"><img src="partition-1.jpg" alt="තේක්ක Partition"><div class="caption"><h3>සාලය / කුස්සිය Partition</h3><span class="number">07</span></div></article>
+      <article class="gallery-card reveal"><img src="roof-1.jpg" alt="තේක්ක වහල නිර්මාණ"><div class="caption"><h3>තේක්ක වහල නිර්මාණ</h3><span class="number">08</span></div></article>
+      <article class="gallery-card reveal"><img src="wardrobe-1.jpg" alt="තේක්ක ඇඳුම් කබඩ්"><div class="caption"><h3>ඇඳුම් කබඩ් · Full Height</h3><span class="number">09</span></div></article>
+      <article class="gallery-card reveal"><img src="window-1.jpg" alt="තේක්ක ජනෙල් Frame"><div class="caption"><h3>තේක්ක ජනෙල් Frame</h3><span class="number">10</span></div></article>
+      <article class="gallery-card reveal"><img src="stair2.jpg" alt="Handrail and staircase"><div class="caption"><h3>Handrail & Staircase</h3><span class="number">11</span></div></article>
+      <article class="gallery-card reveal"><img src="stair3.jpg" alt="Spiral staircase"><div class="caption"><h3>වක්‍රාකාර පඩිපෙළ</h3><span class="number">12</span></div></article>
+    </div>
+  </div>
+</section>
 
-<!--Start of Tawk.to Script-->
+<section class="why">
+  <div class="container">
+    <div class="section-head reveal"><div class="kicker">WHY S.P WOOD CRAFTSMEN</div><h2>විශ්වාසය, නිමාව සහ වටිනාකම</h2><p>ඔබේ නිවසට ගැළපෙන නිර්මාණයක් සැලසුම් කිරීමේ සිට නිමාව දක්වා.</p></div>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="why-icon">✦</div><h3>අත්දැකීම්</h3><p>1996 සිට ලී වැඩ ක්ෂේත්‍රයේ අත්දැකීම්.</p></div>
+      <div class="why-card reveal"><div class="why-icon">⌂</div><h3>නිවසටම මිනුම්</h3><p>ඔබේ ස්ථානයට පැමිණ මිනුම් ලබාගැනීම නොමිලේ.</p></div>
+      <div class="why-card reveal"><div class="why-icon">♢</div><h3>වගකීම</h3><p>අවුරුදු 5ක ලිඛිත වගකීම — අදාළ කොන්දේසි අනුව.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-panel reveal">
+      <div class="kicker">LET'S CREATE SOMETHING TIMELESS</div>
+      <h2>ඔබේ නිවසට ගැළපෙන<br><span style="color:var(--gold2)">තේක්ක නිර්මාණය</span> අදම සැලසුම් කරමු.</h2>
+      <p>දොරවල්, ජනෙල්, පැන්ට්‍රි, පඩිපෙළ හෝ වෙනත් ලී වැඩක් ගැන විමසන්න.</p>
+      <div class="contact-actions">
+        <a class="btn" href="https://wa.me/94767181514?text=ආයුබෝවන්%20S.P%20Wood%20Craftsmen%2C%20මට%20තේක්ක%20වැඩක්%20කරගන්න%20ඕන" target="_blank" rel="noopener">🟢 WhatsApp: 076 718 1514</a>
+        <a class="btn btn-outline" href="#gallery">නිර්මාණ නැවත බලන්න</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer>© 2026 <strong>S.P WOOD CRAFTSMEN</strong> · Balangoda · 100% තේක්ක නිර්මාණ · 076 718 1514</footer>
+<a class="floating-wa" href="https://wa.me/94767181514?text=ආයුබෝවන්%20ප්‍රදීප්,%20Website%20එකෙන්%20ආවේ%20🪚%20තේක්ක%20දොර%20ජනෙල්%20ගැන%20දැනගන්න%20ඕන" target="_blank" rel="noopener">🪚 WhatsApp චැට් කරන්න</a>
+
+<script>
+const toggle=document.getElementById('menuToggle');
+const nav=document.getElementById('navlinks');
+toggle.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+
+<!-- Tawk.to live chat: original property ID supplied in your template -->
 <script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date();
 (function(){
 var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
 s1.async=true;
@@ -131,5 +227,5 @@ s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
-<!--End of Tawk.to Script-->
 </body>
+</html>
