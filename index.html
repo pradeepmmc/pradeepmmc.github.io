@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="si">
 <head>
@@ -6,226 +7,1375 @@
 <meta name="theme-color" content="#17110d">
 <meta name="description" content="S.P Wood Craftsmen - 1996 සිට බළන්ගොඩින් 100% තේක්ක ලී නිර්මාණ. දොරවල්, ජනෙල්, පැන්ට්‍රි, වහල සහ තවත් නිර්මාණ.">
 <title>S.P Wood Craftsmen | Luxury Teak Wood Creations</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+
 <style>
-:root{--bg:#100d0a;--panel:#1b1510;--panel2:#241a13;--gold:#d8b36a;--gold2:#f1d99c;--cream:#f4ead8;--muted:#b9a990;--line:rgba(216,179,106,.25);--green:#25d366}
+:root{
+--bg:#100d0a;
+--panel:#1b1510;
+--panel2:#241a13;
+--gold:#d8b36a;
+--gold2:#f1d99c;
+--cream:#f4ead8;
+--muted:#b9a990;
+--line:rgba(216,179,106,.25);
+--green:#25d366
+}
+
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Noto Sans Sinhala','Nirmala UI','Iskoola Pota',sans-serif;background:var(--bg);color:var(--cream);line-height:1.7;overflow-x:hidden}
+
+body{
+font-family:'Noto Sans Sinhala','Nirmala UI','Iskoola Pota',sans-serif;
+background:var(--bg);
+color:var(--cream);
+line-height:1.7;
+overflow-x:hidden
+}
+
 a{color:inherit;text-decoration:none}
 button{font:inherit}
 .container{width:min(1160px,92%);margin:auto}
-.topline{height:3px;background:linear-gradient(90deg,transparent,var(--gold),var(--gold2),var(--gold),transparent)}
-header{position:absolute;top:3px;left:0;width:100%;z-index:20;border-bottom:1px solid rgba(255,255,255,.1);background:linear-gradient(180deg,rgba(12,9,7,.78),transparent)}
-.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+
+.topline{
+height:3px;
+background:linear-gradient(90deg,transparent,var(--gold),var(--gold2),var(--gold),transparent)
+}
+
+header{
+position:absolute;
+top:3px;
+left:0;
+width:100%;
+z-index:20;
+border-bottom:1px solid rgba(255,255,255,.1);
+background:linear-gradient(180deg,rgba(12,9,7,.78),transparent)
+}
+
+.nav{
+height:82px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px
+}
+
 .brand{display:flex;align-items:center;gap:12px}
-.brand-mark{width:43px;height:43px;border:1px solid var(--gold);display:grid;place-items:center;color:var(--gold);font-family:Georgia,serif;font-size:19px;transform:rotate(45deg);box-shadow:0 0 24px rgba(216,179,106,.12)}
+
+.brand-mark{
+width:43px;
+height:43px;
+border:1px solid var(--gold);
+display:grid;
+place-items:center;
+color:var(--gold);
+font-family:Georgia,serif;
+font-size:19px;
+transform:rotate(45deg);
+box-shadow:0 0 24px rgba(216,179,106,.12)
+}
+
 .brand-mark span{transform:rotate(-45deg)}
 .brand-name{font-weight:900;letter-spacing:1.4px;font-size:15px}
 .brand-sub{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:13px;letter-spacing:3px}
+
 .navlinks{display:flex;gap:27px;align-items:center;font-size:13px;color:#e9ddca}
 .navlinks a{transition:.25s}
 .navlinks a:hover{color:var(--gold2)}
-.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 22px;border:1px solid var(--gold);border-radius:2px;background:linear-gradient(135deg,#e7ca8a,#b68a43);color:#21160c;font-weight:800;box-shadow:0 10px 28px rgba(0,0,0,.25);transition:transform .3s,box-shadow .3s}
-.nav-cta:hover,.btn:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(216,179,106,.25)}
-.menu-toggle{display:none;background:none;border:1px solid var(--line);color:var(--gold);padding:8px 12px}
-.hero{min-height:790px;display:flex;align-items:center;position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(90deg,rgba(13,9,6,.94) 0%,rgba(13,9,6,.75) 46%,rgba(13,9,6,.25) 100%),url('door-design-1.jpg') center/cover no-repeat}
-.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 75% 48%,rgba(214,169,91,.23),transparent 42%),linear-gradient(0deg,var(--bg),transparent 28%)}
-.hero:after{content:"";position:absolute;right:-10%;top:14%;width:55vw;height:55vw;border:1px solid rgba(216,179,106,.18);border-radius:50%;box-shadow:0 0 0 35px rgba(216,179,106,.025),0 0 0 75px rgba(216,179,106,.02);z-index:-1}
+
+.nav-cta,.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:9px;
+padding:13px 22px;
+border:1px solid var(--gold);
+border-radius:2px;
+background:linear-gradient(135deg,#e7ca8a,#b68a43);
+color:#21160c;
+font-weight:800;
+box-shadow:0 10px 28px rgba(0,0,0,.25);
+transition:transform .3s,box-shadow .3s
+}
+
+.nav-cta:hover,.btn:hover{
+transform:translateY(-4px);
+box-shadow:0 16px 34px rgba(216,179,106,.25)
+}
+
+.menu-toggle{
+display:none;
+background:none;
+border:1px solid var(--line);
+color:var(--gold);
+padding:8px 12px
+}
+
+/* HERO */
+
+.hero{
+min-height:790px;
+display:flex;
+align-items:center;
+position:relative;
+isolation:isolate;
+overflow:hidden;
+background:
+linear-gradient(90deg,rgba(13,9,6,.94) 0%,rgba(13,9,6,.75) 46%,rgba(13,9,6,.25) 100%),
+url('door-design-1.jpg') center/cover no-repeat
+}
+
+.hero:before{
+content:"";
+position:absolute;
+inset:0;
+z-index:-1;
+background:radial-gradient(ellipse at 75% 48%,rgba(214,169,91,.23),transparent 42%),linear-gradient(0deg,var(--bg),transparent 28%)
+}
+
+.hero:after{
+content:"";
+position:absolute;
+right:-10%;
+top:14%;
+width:55vw;
+height:55vw;
+border:1px solid rgba(216,179,106,.18);
+border-radius:50%;
+box-shadow:0 0 0 35px rgba(216,179,106,.025),0 0 0 75px rgba(216,179,106,.02);
+z-index:-1
+}
+
 .hero-content{padding:155px 0 110px;max-width:690px;position:relative;z-index:2}
-.eyebrow{color:var(--gold);letter-spacing:4px;text-transform:uppercase;font:600 13px 'Cormorant Garamond',serif;display:flex;align-items:center;gap:13px}
+
+.eyebrow{
+color:var(--gold);
+letter-spacing:4px;
+text-transform:uppercase;
+font:600 13px 'Cormorant Garamond',serif;
+display:flex;
+align-items:center;
+gap:13px
+}
+
 .eyebrow:before{content:"";width:42px;height:1px;background:var(--gold)}
-.hero h1{font-size:clamp(37px,6vw,72px);line-height:1.2;font-weight:900;margin:22px 0 18px;text-shadow:0 8px 35px rgba(0,0,0,.55)}
-.hero h1 em{font-family:'Cormorant Garamond',serif;font-weight:600;color:var(--gold2);font-size:1.12em;letter-spacing:1px}
-.hero p{max-width:560px;color:#e2d4c0;font-size:clamp(15px,1.8vw,19px);margin-bottom:28px}
+
+.hero h1{
+font-size:clamp(37px,6vw,72px);
+line-height:1.2;
+font-weight:900;
+margin:22px 0 18px;
+text-shadow:0 8px 35px rgba(0,0,0,.55)
+}
+
+.hero h1 em{
+font-family:'Cormorant Garamond',serif;
+font-weight:600;
+color:var(--gold2);
+font-size:1.12em;
+letter-spacing:1px
+}
+
+.hero p{
+max-width:560px;
+color:#e2d4c0;
+font-size:clamp(15px,1.8vw,19px);
+margin-bottom:28px
+}
+
 .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
-.btn-outline{background:rgba(20,14,9,.35);color:var(--cream);border:1px solid rgba(241,217,156,.65);box-shadow:none}
-.trust-row{display:flex;gap:28px;flex-wrap:wrap;margin-top:48px;color:#d7c7ae;font-size:13px}
-.trust-row strong{display:block;color:var(--gold2);font:700 26px 'Cormorant Garamond',serif}
-.hero-stamp{position:absolute;right:9%;bottom:16%;width:150px;height:150px;border:1px solid rgba(241,217,156,.65);border-radius:50%;display:grid;place-items:center;text-align:center;color:var(--gold2);font:600 17px 'Cormorant Garamond',serif;transform:rotate(-12deg);background:rgba(22,15,9,.38);backdrop-filter:blur(5px);box-shadow:0 0 45px rgba(0,0,0,.25)}
-.hero-stamp small{display:block;font:10px 'Noto Sans Sinhala';letter-spacing:2px}
+
+.btn-outline{
+background:rgba(20,14,9,.35);
+color:var(--cream);
+border:1px solid rgba(241,217,156,.65);
+box-shadow:none
+}
+
+.trust-row{
+display:flex;
+gap:28px;
+flex-wrap:wrap;
+margin-top:48px;
+color:#d7c7ae;
+font-size:13px
+}
+
+.trust-row strong{
+display:block;
+color:var(--gold2);
+font:700 26px 'Cormorant Garamond',serif
+}
+
+.hero-stamp{
+position:absolute;
+right:9%;
+bottom:16%;
+width:150px;
+height:150px;
+border:1px solid rgba(241,217,156,.65);
+border-radius:50%;
+display:grid;
+place-items:center;
+text-align:center;
+color:var(--gold2);
+font:600 17px 'Cormorant Garamond',serif;
+transform:rotate(-12deg);
+background:rgba(22,15,9,.38);
+backdrop-filter:blur(5px);
+box-shadow:0 0 45px rgba(0,0,0,.25)
+}
+
+.hero-stamp small{
+display:block;
+font:10px 'Noto Sans Sinhala';
+letter-spacing:2px
+}
+
+/* GENERAL SECTIONS */
+
 section{padding:100px 0}
+
 .section-head{text-align:center;max-width:720px;margin:0 auto 48px}
-.kicker{color:var(--gold);font:600 13px 'Cormorant Garamond',serif;letter-spacing:4px;text-transform:uppercase}
-.section-head h2{font-size:clamp(27px,4vw,43px);line-height:1.35;margin:10px 0;color:var(--cream)}
+
+.kicker{
+color:var(--gold);
+font:600 13px 'Cormorant Garamond',serif;
+letter-spacing:4px;
+text-transform:uppercase
+}
+
+.section-head h2{
+font-size:clamp(27px,4vw,43px);
+line-height:1.35;
+margin:10px 0;
+color:var(--cream)
+}
+
 .section-head p{color:var(--muted);font-size:15px}
+
 .intro{background:linear-gradient(180deg,#100d0a,#17110d)}
-.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+
+.intro-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center
+}
+
 .intro-image{position:relative;perspective:1000px}
-.intro-image img{width:100%;height:470px;object-fit:cover;border:1px solid var(--line);box-shadow:22px 22px 0 rgba(216,179,106,.08);transform:rotateY(-5deg);transition:.5s}
+
+.intro-image img{
+width:100%;
+height:470px;
+object-fit:cover;
+border:1px solid var(--line);
+box-shadow:22px 22px 0 rgba(216,179,106,.08);
+transform:rotateY(-5deg);
+transition:.5s
+}
+
 .intro-image:hover img{transform:rotateY(0) translateY(-5px)}
-.intro-image:after{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid var(--line);pointer-events:none}
-.intro-copy h2{font-size:clamp(27px,4vw,42px);line-height:1.4;margin:12px 0 20px}
+
+.intro-image:after{
+content:"";
+position:absolute;
+inset:18px -18px -18px 18px;
+border:1px solid var(--line);
+pointer-events:none
+}
+
+.intro-copy h2{
+font-size:clamp(27px,4vw,42px);
+line-height:1.4;
+margin:12px 0 20px
+}
+
 .intro-copy p{color:var(--muted);margin-bottom:18px}
-.promise{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin:28px 0}
-.promise div{padding:17px;border:1px solid var(--line);background:rgba(255,255,255,.025)}
+
+.promise{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:13px;
+margin:28px 0
+}
+
+.promise div{
+padding:17px;
+border:1px solid var(--line);
+background:rgba(255,255,255,.025)
+}
+
 .promise b{display:block;color:var(--gold2);font-size:14px;margin-bottom:4px}
 .promise span{color:var(--muted);font-size:12px}
+
 .gallery-section{background:#0d0a08}
-.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.gallery-card{background:linear-gradient(145deg,#261b13,#120e0b);border:1px solid var(--line);padding:9px;position:relative;transform-style:preserve-3d;transition:transform .35s,box-shadow .35s}
-.gallery-card:hover{transform:translateY(-9px) rotateX(2deg) rotateY(-2deg);box-shadow:0 25px 45px rgba(0,0,0,.45),0 0 25px rgba(216,179,106,.12)}
-.gallery-card img{display:block;width:100%;height:285px;object-fit:cover;filter:saturate(.88);transition:filter .35s}
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px
+}
+
+.gallery-card{
+background:linear-gradient(145deg,#261b13,#120e0b);
+border:1px solid var(--line);
+padding:9px;
+position:relative;
+transform-style:preserve-3d;
+transition:transform .35s,box-shadow .35s
+}
+
+.gallery-card:hover{
+transform:translateY(-9px) rotateX(2deg) rotateY(-2deg);
+box-shadow:0 25px 45px rgba(0,0,0,.45),0 0 25px rgba(216,179,106,.12)
+}
+
+.gallery-card img{
+display:block;
+width:100%;
+height:285px;
+object-fit:cover;
+filter:saturate(.88);
+transition:filter .35s
+}
+
 .gallery-card:hover img{filter:saturate(1.08)}
-.gallery-card .caption{padding:17px 13px 13px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+
+.gallery-card .caption{
+padding:17px 13px 13px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:10px
+}
+
 .gallery-card h3{font-size:15px;font-weight:700}
 .gallery-card .number{font:600 20px 'Cormorant Garamond',serif;color:var(--gold)}
-.gallery-card:after{content:"";position:absolute;inset:0;border:1px solid transparent;pointer-events:none;transition:.3s}
+
+.gallery-card:after{
+content:"";
+position:absolute;
+inset:0;
+border:1px solid transparent;
+pointer-events:none;
+transition:.3s
+}
+
 .gallery-card:hover:after{inset:5px;border-color:rgba(241,217,156,.35)}
+
 .why{background:linear-gradient(135deg,#21170f,#100d0a)}
-.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.why-card{padding:30px 25px;border:1px solid var(--line);background:rgba(255,255,255,.025);text-align:center;transition:.3s}
-.why-card:hover{background:rgba(216,179,106,.07);transform:translateY(-6px)}
+
+.why-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px
+}
+
+.why-card{
+padding:30px 25px;
+border:1px solid var(--line);
+background:rgba(255,255,255,.025);
+text-align:center;
+transition:.3s
+}
+
+.why-card:hover{
+background:rgba(216,179,106,.07);
+transform:translateY(-6px)
+}
+
 .why-icon{font-size:30px;color:var(--gold);margin-bottom:12px}
 .why-card h3{font-size:17px;margin-bottom:9px}
 .why-card p{font-size:13px;color:var(--muted)}
-.contact{background:radial-gradient(ellipse at center,rgba(115,77,37,.28),transparent 65%),#100d0a;text-align:center}
-.contact-panel{max-width:850px;margin:auto;padding:55px 25px;border:1px solid rgba(216,179,106,.4);background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.01));box-shadow:0 25px 80px rgba(0,0,0,.3);position:relative}
-.contact-panel:before,.contact-panel:after{content:"✦";position:absolute;color:var(--gold);font-size:20px}
-.contact-panel:before{top:15px;left:20px}.contact-panel:after{bottom:15px;right:20px}
-.contact-panel h2{font-size:clamp(27px,4vw,42px);margin:12px 0}
+
+.contact{
+background:radial-gradient(ellipse at center,rgba(115,77,37,.28),transparent 65%),#100d0a;
+text-align:center
+}
+
+.contact-panel{
+max-width:850px;
+margin:auto;
+padding:55px 25px;
+border:1px solid rgba(216,179,106,.4);
+background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.01));
+box-shadow:0 25px 80px rgba(0,0,0,.3);
+position:relative
+}
+
+.contact-panel:before,.contact-panel:after{
+content:"✦";
+position:absolute;
+color:var(--gold);
+font-size:20px
+}
+
+.contact-panel:before{top:15px;left:20px}
+.contact-panel:after{bottom:15px;right:20px}
+
+.contact-panel h2{
+font-size:clamp(27px,4vw,42px);
+margin:12px 0
+}
+
 .contact-panel p{color:var(--muted);margin-bottom:25px}
-.contact-actions{display:flex;justify-content:center;gap:13px;flex-wrap:wrap}
-footer{padding:28px 15px;text-align:center;background:#080706;color:#9f907c;font-size:12px;border-top:1px solid var(--line)}
+
+.contact-actions{
+display:flex;
+justify-content:center;
+gap:13px;
+flex-wrap:wrap
+}
+
+footer{
+padding:28px 15px;
+text-align:center;
+background:#080706;
+color:#9f907c;
+font-size:12px;
+border-top:1px solid var(--line)
+}
+
 footer strong{color:var(--gold2)}
-.floating-wa{position:fixed;right:22px;bottom:22px;z-index:50;background:var(--green);color:#062b14;border-radius:50px;padding:14px 19px;font-weight:800;font-size:13px;box-shadow:0 10px 30px rgba(0,0,0,.4);animation:pulse 2.2s infinite}
-@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,.35),0 10px 30px rgba(0,0,0,.4)}50%{box-shadow:0 0 0 12px rgba(37,211,102,0),0 10px 30px rgba(0,0,0,.4)}}
+
+.floating-wa{
+position:fixed;
+right:22px;
+bottom:22px;
+z-index:50;
+background:var(--green);
+color:#062b14;
+border-radius:50px;
+padding:14px 19px;
+font-weight:800;
+font-size:13px;
+box-shadow:0 10px 30px rgba(0,0,0,.4);
+animation:pulse 2.2s infinite
+}
+
+@keyframes pulse{
+0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,.35),0 10px 30px rgba(0,0,0,.4)}
+50%{box-shadow:0 0 0 12px rgba(37,211,102,0),0 10px 30px rgba(0,0,0,.4)}
+}
+
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
 .reveal.visible{opacity:1;transform:translateY(0)}
-@media(max-width:850px){.navlinks{display:none;position:absolute;top:81px;left:0;right:0;background:#17110d;padding:22px;flex-direction:column;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.menu-toggle{display:block}.nav-cta{display:none}.hero{min-height:700px;background-position:60% center}.hero-stamp{right:5%;bottom:8%;width:112px;height:112px;font-size:14px}.intro-grid{grid-template-columns:1fr;gap:42px}.intro-image{max-width:650px}.gallery-grid{grid-template-columns:repeat(2,1fr)}.why-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.nav{height:72px}.brand-name{font-size:12px}.brand-sub{font-size:11px}.hero{min-height:740px}.hero-content{padding-top:130px}.hero-stamp{display:none}.trust-row{gap:18px}.trust-row strong{font-size:22px}section{padding:75px 0}.gallery-grid{grid-template-columns:1fr}.gallery-card img{height:270px}.why-grid{grid-template-columns:1fr}.promise{grid-template-columns:1fr}.intro-image img{height:330px}.floating-wa{right:12px;bottom:12px;padding:12px 15px;font-size:11px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+/* =================================
+   3D CARPENTER ASSISTANT
+================================= */
+
+#sp-assistant{
+position:fixed;
+left:18px;
+bottom:16px;
+width:190px;
+z-index:100;
+text-align:center;
+font-family:'Noto Sans Sinhala',sans-serif;
+perspective:900px;
+transition:opacity .4s,transform .4s;
+}
+
+#sp-assistant.hidden{
+opacity:0;
+transform:translateY(30px);
+pointer-events:none
+}
+
+.sp-close{
+position:absolute;
+right:0;
+top:0;
+width:27px;
+height:27px;
+border-radius:50%;
+border:1px solid #d8b36a;
+background:#21160d;
+color:#f1d99c;
+cursor:pointer;
+z-index:10;
+font-size:15px
+}
+
+.sp-message{
+position:relative;
+background:linear-gradient(135deg,#fff3d9,#d9b779);
+color:#392413;
+padding:12px 13px;
+border-radius:15px 15px 4px 15px;
+font-size:11px;
+font-weight:700;
+line-height:1.8;
+box-shadow:0 5px 25px #0008;
+border:1px solid #e4c581;
+margin:0 0 5px;
+min-height:55px;
+}
+
+.sp-message:after{
+content:"";
+position:absolute;
+right:23px;
+bottom:-9px;
+border-width:9px 0 0 12px;
+border-style:solid;
+border-color:transparent transparent transparent #d9b779
+}
+
+.sp-scene{
+height:183px;
+position:relative;
+transform-style:preserve-3d;
+animation:sp-float 3.2s ease-in-out infinite;
+}
+
+.sp-shadow{
+position:absolute;
+bottom:2px;
+left:49px;
+width:95px;
+height:17px;
+border-radius:50%;
+background:#0008;
+filter:blur(7px);
+animation:sp-shadow 3.2s infinite
+}
+
+.sp-person{
+position:absolute;
+width:145px;
+height:175px;
+left:22px;
+bottom:3px;
+transform-style:preserve-3d;
+}
+
+/* Helmet */
+
+.sp-helmet{
+position:absolute;
+top:0;
+left:36px;
+width:76px;
+height:34px;
+border-radius:42px 42px 9px 9px;
+background:linear-gradient(135deg,#ffe5a0,#d39b3e 55%,#8c5520);
+box-shadow:inset -7px -5px 9px #74431866,0 5px 9px #0008;
+z-index:5;
+border-bottom:5px solid #9c692d
+}
+
+.sp-helmet:before{
+content:"";
+position:absolute;
+width:45px;
+height:7px;
+background:#fff7d4;
+top:6px;
+left:15px;
+border-radius:50%;
+opacity:.7
+}
+
+.sp-helmet:after{
+content:"";
+position:absolute;
+width:91px;
+height:8px;
+background:linear-gradient(#f4d38b,#a66e29);
+border-radius:50%;
+bottom:-8px;
+left:-8px;
+box-shadow:0 3px 5px #0007
+}
+
+/* Face */
+
+.sp-face{
+position:absolute;
+top:27px;
+left:42px;
+width:68px;
+height:72px;
+border-radius:43% 43% 48% 48%;
+background:linear-gradient(115deg,#ffdbad 0%,#e9ae79 55%,#ae663c 100%);
+box-shadow:inset -8px -6px 12px #8a492c66,0 5px 12px #0007;
+z-index:4
+}
+
+.sp-ear{
+position:absolute;
+top:53px;
+width:13px;
+height:22px;
+border-radius:50%;
+background:#d58b5b;
+z-index:3
+}
+
+.sp-ear.left{left:34px}
+.sp-ear.right{right:34px}
+
+.sp-eyebrow{
+position:absolute;
+top:19px;
+width:17px;
+height:4px;
+background:#42291c;
+border-radius:50%;
+z-index:2
+}
+
+.sp-eyebrow.left{left:12px;transform:rotate(-8deg)}
+.sp-eyebrow.right{right:12px;transform:rotate(8deg)}
+
+.sp-eye{
+position:absolute;
+top:26px;
+width:8px;
+height:11px;
+border-radius:50%;
+background:#2c1a12;
+box-shadow:inset 2px 1px 2px #fff;
+animation:sp-blink 5s infinite
+}
+
+.sp-eye.left{left:16px}
+.sp-eye.right{right:16px}
+
+.sp-nose{
+position:absolute;
+top:35px;
+left:29px;
+width:11px;
+height:14px;
+background:#c47b50;
+border-radius:40% 40% 60% 60%;
+box-shadow:inset -2px -2px 3px #7b412b55
+}
+
+.sp-moustache{
+position:absolute;
+top:46px;
+left:19px;
+width:30px;
+height:10px;
+background:#392319;
+border-radius:50% 50% 60% 60%;
+z-index:3
+}
+
+.sp-mouth{
+position:absolute;
+top:54px;
+left:27px;
+width:15px;
+height:5px;
+background:#702e29;
+border-radius:50%;
+z-index:4;
+transition:.15s
+}
+
+#sp-assistant.talking .sp-mouth{
+height:13px;
+width:17px;
+left:26px;
+border-radius:40% 40% 55% 55%;
+animation:sp-mouth-move .18s infinite alternate
+}
+
+/* Body */
+
+.sp-body{
+position:absolute;
+top:91px;
+left:27px;
+width:98px;
+height:70px;
+border-radius:23px 23px 8px 8px;
+background:linear-gradient(115deg,#a36b3e,#59351f 65%,#301b10);
+box-shadow:inset -12px -5px 12px #160b06a8,0 5px 9px #0006;
+z-index:3
+}
+
+.sp-shirt{
+position:absolute;
+left:34px;
+top:0;
+width:31px;
+height:45px;
+background:linear-gradient(90deg,#f6e7c9,#bca98c);
+clip-path:polygon(0 0,100% 0,80% 100%,50% 75%,20% 100%)
+}
+
+.sp-apron{
+position:absolute;
+top:10px;
+left:19px;
+width:59px;
+height:58px;
+background:linear-gradient(110deg,#d7a354,#865329);
+border-radius:10px 10px 5px 5px;
+border:2px solid #75451f;
+box-shadow:inset -6px -5px 8px #41200c66
+}
+
+.sp-apron:before{
+content:"SP";
+position:absolute;
+top:23px;
+left:19px;
+font:bold 13px Georgia,serif;
+color:#f6d99c
+}
+
+.sp-apron:after{
+content:"";
+position:absolute;
+top:9px;
+left:11px;
+width:35px;
+height:1px;
+background:#f8d99c88
+}
+
+/* Arms */
+
+.sp-arm{
+position:absolute;
+top:101px;
+width:20px;
+height:54px;
+border-radius:14px;
+background:linear-gradient(90deg,#d18b5b,#985532);
+transform-origin:top center;
+z-index:2;
+box-shadow:inset -4px -3px 5px #542b1a55
+}
+
+.sp-arm.left{
+left:17px;
+transform:rotate(24deg)
+}
+
+.sp-arm.right{
+right:12px;
+transform:rotate(-23deg)
+}
+
+#sp-assistant.talking .sp-arm.right{
+animation:sp-wave .65s ease-in-out infinite alternate
+}
+
+.sp-hand{
+position:absolute;
+bottom:-8px;
+left:-2px;
+width:23px;
+height:22px;
+border-radius:50%;
+background:#e2a474;
+box-shadow:inset -3px -3px 5px #854b2e55
+}
+
+/* Legs */
+
+.sp-leg{
+position:absolute;
+top:151px;
+width:27px;
+height:27px;
+background:linear-gradient(90deg,#372219,#17100c);
+border-radius:5px 5px 9px 9px;
+z-index:1
+}
+
+.sp-leg.left{left:48px}
+.sp-leg.right{left:83px}
+
+.sp-shoe{
+position:absolute;
+bottom:-2px;
+left:-5px;
+width:35px;
+height:12px;
+border-radius:50% 50% 5px 5px;
+background:linear-gradient(#6c482b,#20140c);
+box-shadow:0 3px 5px #0008
+}
+
+/* Controls */
+
+.sp-controls{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:6px;
+margin-top:2px
+}
+
+#sp-talk-button{
+border:1px solid #e6c17b;
+background:linear-gradient(135deg,#e8c984,#ae7b37);
+color:#241609;
+padding:9px 13px;
+border-radius:25px;
+font-size:11px;
+font-weight:900;
+cursor:pointer;
+box-shadow:0 5px 15px #0007;
+transition:.25s
+}
+
+#sp-talk-button:hover{
+transform:translateY(-3px);
+filter:brightness(1.12)
+}
+
+#sp-talk-button:disabled{
+opacity:.7;
+cursor:wait
+}
+
+@keyframes sp-float{
+0%,100%{transform:translateY(0) rotateY(-4deg)}
+50%{transform:translateY(-8px) rotateY(4deg)}
+}
+
+@keyframes sp-shadow{
+0%,100%{transform:scale(1);opacity:.65}
+50%{transform:scale(.8);opacity:.35}
+}
+
+@keyframes sp-wave{
+from{transform:rotate(-23deg)}
+to{transform:rotate(-125deg)}
+}
+
+@keyframes sp-mouth-move{
+from{height:5px}
+to{height:14px}
+}
+
+@keyframes sp-blink{
+0%,45%,49%,100%{transform:scaleY(1)}
+47%{transform:scaleY(.1)}
+}
+
+/* Responsive */
+
+@media(max-width:850px){
+.navlinks{
+display:none;
+position:absolute;
+top:81px;
+left:0;
+right:0;
+background:#17110d;
+padding:22px;
+flex-direction:column;
+border-bottom:1px solid var(--line)
+}
+
+.navlinks.open{display:flex}
+.menu-toggle{display:block}
+.nav-cta{display:none}
+.hero{min-height:700px;background-position:60% center}
+.hero-stamp{right:5%;bottom:8%;width:112px;height:112px;font-size:14px}
+.intro-grid{grid-template-columns:1fr;gap:42px}
+.intro-image{max-width:650px}
+.gallery-grid{grid-template-columns:repeat(2,1fr)}
+.why-grid{grid-template-columns:1fr 1fr}
+}
+
+@media(max-width:560px){
+.nav{height:72px}
+.brand-name{font-size:12px}
+.brand-sub{font-size:11px}
+.hero{min-height:740px}
+.hero-content{padding-top:130px}
+.hero-stamp{display:none}
+.trust-row{gap:18px}
+.trust-row strong{font-size:22px}
+section{padding:75px 0}
+.gallery-grid{grid-template-columns:1fr}
+.gallery-card img{height:270px}
+.why-grid{grid-template-columns:1fr}
+.promise{grid-template-columns:1fr}
+.intro-image img{height:330px}
+.floating-wa{right:12px;bottom:12px;padding:12px 15px;font-size:11px}
+
+/* Mobile character */
+#sp-assistant{
+left:5px;
+bottom:9px;
+transform:scale(.78);
+transform-origin:bottom left
+}
+}
+
+@media(prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+*,*:before,*:after{animation:none!important;transition:none!important}
+.reveal{opacity:1;transform:none}
+}
 </style>
 </head>
+
 <body>
+
 <div class="topline"></div>
+
 <header>
-  <div class="container nav">
-    <a class="brand" href="#home" aria-label="S.P Wood Craftsmen home">
-      <div class="brand-mark"><span>SP</span></div>
-      <div><div class="brand-name">S.P WOOD CRAFTSMEN</div><div class="brand-sub">TEAK • CRAFT • LEGACY</div></div>
-    </a>
-    <nav class="navlinks" id="navlinks">
-      <a href="#home">මුල් පිටුව</a><a href="#about">අප ගැන</a><a href="#gallery">අපේ නිර්මාණ</a><a href="#contact">සම්බන්ධ වන්න</a>
-    </nav>
-    <a class="nav-cta" href="https://wa.me/94767181514?text=ආයුබෝවන්%20S.P%20Wood%20Craftsmen%2C%20මට%20තේක්ක%20වැඩක්%20කරගන්න%20ඕන" target="_blank" rel="noopener">WhatsApp ↗</a>
-    <button class="menu-toggle" id="menuToggle" aria-label="මෙනුව විවෘත කරන්න">☰</button>
-  </div>
+<div class="container nav">
+
+<a class="brand" href="#home" aria-label="S.P Wood Craftsmen home">
+<div class="brand-mark"><span>SP</span></div>
+<div>
+<div class="brand-name">S.P WOOD CRAFTSMEN</div>
+<div class="brand-sub">TEAK • CRAFT • LEGACY</div>
+</div>
+</a>
+
+<nav class="navlinks" id="navlinks">
+<a href="#home">මුල් පිටුව</a>
+<a href="#about">අප ගැන</a>
+<a href="#gallery">අපේ නිර්මාණ</a>
+<a href="#contact">සම්බන්ධ වන්න</a>
+</nav>
+
+<a class="nav-cta" href="https://wa.me/94767181514?text=ආයුබෝවන්%20S.P%20Wood%20Craftsmen%2C%20මට%20තේක්ක%20වැඩක්%20කරගන්න%20ඕන" target="_blank" rel="noopener">WhatsApp ↗</a>
+
+<button class="menu-toggle" id="menuToggle" aria-label="මෙනුව විවෘත කරන්න">☰</button>
+
+</div>
 </header>
 
 <main>
+
 <section class="hero" id="home">
-  <div class="container">
-    <div class="hero-content">
-      <div class="eyebrow">SINCE 1996 · BALANGODA</div>
-      <h1>කාලයත් සමඟ<br><em>වටිනාකම වැඩිවන</em><br>තේක්ක නිර්මාණ.</h1>
-      <p>ඔබේ නිවසේ අලංකාරයට, ශක්තියට සහ දිගුකාලීන වටිනාකමට — අත්දැකීම් සහිත නිමාවකින් යුත් තේක්ක ලී වැඩ.</p>
-      <div class="hero-actions">
-        <a class="btn" href="https://wa.me/94767181514?text=ආයුබෝවන්%20S.P%20Wood%20Craftsmen%2C%20මට%20තේක්ක%20වැඩක්%20කරගන්න%20ඕන" target="_blank" rel="noopener">🟢 දැන් විමසන්න</a>
-        <a class="btn btn-outline" href="#gallery">නිර්මාණ බලන්න ↓</a>
-      </div>
-      <div class="trust-row">
-        <div><strong>1996</strong>සිට අත්දැකීම්</div>
-        <div><strong>100%</strong>තේක්ක ලී නිර්මාණ</div>
-        <div><strong>5 වසර</strong>ලිඛිත වගකීම*</div>
-      </div>
-    </div>
-    <div class="hero-stamp"><div>CRAFTED<br>WITH CARE<small>EST. 1996</small></div></div>
-  </div>
+<div class="container">
+
+<div class="hero-content">
+
+<div class="eyebrow">SINCE 1996 · BALANGODA</div>
+
+<h1>
+කාලයත් සමඟ<br>
+<em>වටිනාකම වැඩිවන</em><br>
+තේක්ක නිර්මාණ.
+</h1>
+
+<p>
+ඔබේ නිවසේ අලංකාරයට, ශක්තියට සහ දිගුකාලීන වටිනාකමට —
+අත්දැකීම් සහිත නිමාවකින් යුත් තේක්ක ලී වැඩ.
+</p>
+
+<div class="hero-actions">
+<a class="btn" href="https://wa.me/94767181514?text=ආයුබෝවන්%20S.P%20Wood%20Craftsmen%2C%20මට%20තේක්ක%20වැඩක්%20කරගන්න%20ඕන" target="_blank" rel="noopener">🟢 දැන් විමසන්න</a>
+<a class="btn btn-outline" href="#gallery">නිර්මාණ බලන්න ↓</a>
+</div>
+
+<div class="trust-row">
+<div><strong>1996</strong>සිට අත්දැකීම්</div>
+<div><strong>100%</strong>තේක්ක ලී නිර්මාණ</div>
+<div><strong>5 වසර</strong>ලිඛිත වගකීම*</div>
+</div>
+
+</div>
+
+<div class="hero-stamp">
+<div>CRAFTED<br>WITH CARE<small>EST. 1996</small></div>
+</div>
+
+</div>
 </section>
 
 <section class="intro" id="about">
-  <div class="container intro-grid">
-    <div class="intro-image reveal"><img src="door-design-2.jpg" alt="S.P Wood Craftsmen තේක්ක දොර නිර්මාණයක්"></div>
-    <div class="intro-copy reveal">
-      <div class="kicker">OUR CRAFT · OUR PROMISE</div>
-      <h2>ඔබේ නිවසටත්<br><span style="color:var(--gold2)">තේක්ක ගැම්මක්</span> ඕනද?</h2>
-      <p>බළන්ගොඩ සිට ඔබේ නිවසටම ගැළපෙන තේක්ක දොරවල්, ජනෙල්, පැන්ට්‍රි කබඩ් සහ තවත් ලී නිර්මාණ — ඔබේ අවශ්‍යතාවයට අනුව.</p>
-      <div class="promise">
-        <div><b>✓ නොමිලේ මිනුම්</b><span>නිවසටම පැමිණ මිනුම් ලබාගැනීම</span></div>
-        <div><b>✓ අවුරුදු 5ක වගකීම</b><span>ලිඛිත වගකීමේ කොන්දේසි අදාළ වේ</span></div>
-        <div><b>✓ 1996 සිට අත්දැකීම්</b><span>වසර ගණනක වෘත්තීය පළපුරුද්ද</span></div>
-        <div><b>✓ ඔබේ සැලසුමට අනුව</b><span>අවශ්‍යතාවයට ගැළපෙන නිර්මාණ</span></div>
-      </div>
-      <a class="btn" href="https://wa.me/94767181514?text=ආයුබෝවන්%20ප්‍රදීප්,%20මට%20තේක්ක%20වැඩක්%20ගැන%20විමසන්න%20ඕන" target="_blank" rel="noopener">ඔබේ වැඩේ ගැන කතා කරමු ↗</a>
-    </div>
-  </div>
+<div class="container intro-grid">
+
+<div class="intro-image reveal">
+<img src="door-design-2.jpg" alt="S.P Wood Craftsmen තේක්ක දොර නිර්මාණයක්">
+</div>
+
+<div class="intro-copy reveal">
+<div class="kicker">OUR CRAFT · OUR PROMISE</div>
+
+<h2>ඔබේ නිවසටත්<br><span style="color:var(--gold2)">තේක්ක ගැම්මක්</span> ඕනද?</h2>
+
+<p>
+බළන්ගොඩ සිට ඔබේ නිවසටම ගැළපෙන තේක්ක දොරවල්,
+ජනෙල්, පැන්ට්‍රි කබඩ් සහ තවත් ලී නිර්මාණ —
+ඔබේ අවශ්‍යතාවයට අනුව.
+</p>
+
+<div class="promise">
+<div><b>✓ නොමිලේ මිනුම්</b><span>නිවසටම පැමිණ මිනුම් ලබාගැනීම</span></div>
+<div><b>✓ අවුරුදු 5ක වගකීම</b><span>ලිඛිත වගකීමේ කොන්දේසි අදාළ වේ</span></div>
+<div><b>✓ 1996 සිට අත්දැකීම්</b><span>වසර ගණනක වෘත්තීය පළපුරුද්ද</span></div>
+<div><b>✓ ඔබේ සැලසුමට අනුව</b><span>අවශ්‍යතාවයට ගැළපෙන නිර්මාණ</span></div>
+</div>
+
+<a class="btn" href="https://wa.me/94767181514?text=ආයුබෝවන්%20ප්‍රදීප්,%20මට%20තේක්ක%20වැඩක්%20ගැන%20විමසන්න%20ඕන" target="_blank" rel="noopener">ඔබේ වැඩේ ගැන කතා කරමු ↗</a>
+
+</div>
+</div>
 </section>
 
 <section class="gallery-section" id="gallery">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="kicker">SELECTED WORKS</div>
-      <h2>අපේ තේක්ක නිර්මාණ එකතුව</h2>
-      <p>අපගේ වැඩ කිහිපයක් — ඔබේ නිවසට ගැළපෙන නිර්මාණය තෝරාගන්න.</p>
-    </div>
-    <div class="gallery-grid">
-      <article class="gallery-card reveal"><img src="door-design-1.jpg" alt="තේක්ක ප්‍රධාන දොර"><div class="caption"><h3>ප්‍රධාන දොර · Modern Glass</h3><span class="number">01</span></div></article>
-      <article class="gallery-card reveal"><img src="door-design-2.jpg" alt="තේක්ක සාලයේ දොර"><div class="caption"><h3>සාලයේ දොර · 4 Panels</h3><span class="number">02</span></div></article>
-      <article class="gallery-card reveal"><img src="door-design-3.jpg" alt="Classic තේක්ක ප්‍රධාන දොර"><div class="caption"><h3>ප්‍රධාන දොර · Classic</h3><span class="number">03</span></div></article>
-      <article class="gallery-card reveal"><img src="pantry1.jpg" alt="තේක්ක පැන්ට්‍රි කබඩ්"><div class="caption"><h3>තේක්ක පැන්ට්‍රි කබඩ්</h3><span class="number">04</span></div></article>
-      <article class="gallery-card reveal"><img src="pantry2.jpg" alt="මුළුතැන්ගෙයි උඩ කබඩ්"><div class="caption"><h3>මුළුතැන්ගෙයි උඩ කබඩ්</h3><span class="number">05</span></div></article>
-      <article class="gallery-card reveal"><img src="pantry3.jpg" alt="Kitchen Sink Pantry"><div class="caption"><h3>Sink Pantry Unit</h3><span class="number">06</span></div></article>
-      <article class="gallery-card reveal"><img src="partition-1.jpg" alt="තේක්ක Partition"><div class="caption"><h3>සාලය / කුස්සිය Partition</h3><span class="number">07</span></div></article>
-      <article class="gallery-card reveal"><img src="roof-1.jpg" alt="තේක්ක වහල නිර්මාණ"><div class="caption"><h3>තේක්ක වහල නිර්මාණ</h3><span class="number">08</span></div></article>
-      <article class="gallery-card reveal"><img src="wardrobe-1.jpg" alt="තේක්ක ඇඳුම් කබඩ්"><div class="caption"><h3>ඇඳුම් කබඩ් · Full Height</h3><span class="number">09</span></div></article>
-      <article class="gallery-card reveal"><img src="window-1.jpg" alt="තේක්ක ජනෙල් Frame"><div class="caption"><h3>තේක්ක ජනෙල් Frame</h3><span class="number">10</span></div></article>
-      <article class="gallery-card reveal"><img src="stair2.jpg" alt="Handrail and staircase"><div class="caption"><h3>Handrail & Staircase</h3><span class="number">11</span></div></article>
-      <article class="gallery-card reveal"><img src="stair3.jpg" alt="Spiral staircase"><div class="caption"><h3>වක්‍රාකාර පඩිපෙළ</h3><span class="number">12</span></div></article>
-    </div>
-  </div>
+<div class="container">
+
+<div class="section-head reveal">
+<div class="kicker">SELECTED WORKS</div>
+<h2>අපේ තේක්ක නිර්මාණ එකතුව</h2>
+<p>අපගේ වැඩ කිහිපයක් — ඔබේ නිවසට ගැළපෙන නිර්මාණය තෝරාගන්න.</p>
+</div>
+
+<div class="gallery-grid">
+
+<article class="gallery-card reveal">
+<img src="door-design-1.jpg" alt="තේක්ක ප්‍රධාන දොර">
+<div class="caption"><h3>ප්‍රධාන දොර · Modern Glass</h3><span class="number">01</span></div>
+</article>
+
+<article class="gallery-card reveal">
+<img src="door-design-2.jpg" alt="තේක්ක සාලයේ දොර">
+<div class="caption"><h3>සාලයේ දොර · 4 Panels</h3><span class="number">02</span></div>
+</article>
+
+<article class="gallery-card reveal">
+<img src="door-design-3.jpg" alt="Classic තේක්ක ප්‍රධාන දොර">
+<div class="caption"><h3>ප්‍රධාන දොර · Classic</h3><span class="number">03</span></div>
+</article>
+
+<article class="gallery-card reveal">
+<img src="pantry1.jpg" alt="තේක්ක පැන්ට්‍රි කබඩ්">
+<div class="caption"><h3>තේක්ක පැන්ට්‍රි කබඩ්</h3><span class="number">04</span></div>
+</article>
+
+<article class="gallery-card reveal">
+<img src="pantry2.jpg" alt="මුළුතැන්ගෙයි උඩ කබඩ්">
+<div class="caption"><h3>මුළුතැන්ගෙයි උඩ කබඩ්</h3><span class="number">05</span></div>
+</article>
+
+<article class="gallery-card reveal">
+<img src="pantry3.jpg" alt="Kitchen Sink Pantry">
+<div class="caption"><h3>Sink Pantry Unit</h3><span class="number">06</span></div>
+</article>
+
+<article class="gallery-card reveal">
+<img src="partition-1.jpg" alt="තේක්ක Partition">
+<div class="caption"><h3>සාලය / කුස්සිය Partition</h3><span class="number">07</span></div>
+</article>
+
+<article class="gallery-card reveal">
+<img src="roof-1.jpg" alt="තේක්ක වහල නිර්මාණ">
+<div class="caption"><h3>තේක්ක වහල නිර්මාණ</h3><span class="number">08</span></div>
+</article>
+
+<article class="gallery-card reveal">
+<img src="wardrobe-1.jpg" alt="තේක්ක ඇඳුම් කබඩ්">
+<div class="caption"><h3>ඇඳුම් කබඩ් · Full Height</h3><span class="number">09</span></div>
+</article>
+
+<article class="gallery-card reveal">
+<img src="window-1.jpg" alt="තේක්ක ජනෙල් Frame">
+<div class="caption"><h3>තේක්ක ජනෙල් Frame</h3><span class="number">10</span></div>
+</article>
+
+<article class="gallery-card reveal">
+<img src="stair2.jpg" alt="Handrail and staircase">
+<div class="caption"><h3>Handrail & Staircase</h3><span class="number">11</span></div>
+</article>
+
+<article class="gallery-card reveal">
+<img src="stair3.jpg" alt="Spiral staircase">
+<div class="caption"><h3>වක්‍රාකාර පඩිපෙළ</h3><span class="number">12</span></div>
+</article>
+
+</div>
+</div>
 </section>
 
 <section class="why">
-  <div class="container">
-    <div class="section-head reveal"><div class="kicker">WHY S.P WOOD CRAFTSMEN</div><h2>විශ්වාසය, නිමාව සහ වටිනාකම</h2><p>ඔබේ නිවසට ගැළපෙන නිර්මාණයක් සැලසුම් කිරීමේ සිට නිමාව දක්වා.</p></div>
-    <div class="why-grid">
-      <div class="why-card reveal"><div class="why-icon">✦</div><h3>අත්දැකීම්</h3><p>1996 සිට ලී වැඩ ක්ෂේත්‍රයේ අත්දැකීම්.</p></div>
-      <div class="why-card reveal"><div class="why-icon">⌂</div><h3>නිවසටම මිනුම්</h3><p>ඔබේ ස්ථානයට පැමිණ මිනුම් ලබාගැනීම නොමිලේ.</p></div>
-      <div class="why-card reveal"><div class="why-icon">♢</div><h3>වගකීම</h3><p>අවුරුදු 5ක ලිඛිත වගකීම — අදාළ කොන්දේසි අනුව.</p></div>
-    </div>
-  </div>
+<div class="container">
+
+<div class="section-head reveal">
+<div class="kicker">WHY S.P WOOD CRAFTSMEN</div>
+<h2>විශ්වාසය, නිමාව සහ වටිනාකම</h2>
+<p>ඔබේ නිවසට ගැළපෙන නිර්මාණයක් සැලසුම් කිරීමේ සිට නිමාව දක්වා.</p>
+</div>
+
+<div class="why-grid">
+
+<div class="why-card reveal">
+<div class="why-icon">✦</div>
+<h3>අත්දැකීම්</h3>
+<p>1996 සිට ලී වැඩ ක්ෂේත්‍රයේ අත්දැකීම්.</p>
+</div>
+
+<div class="why-card reveal">
+<div class="why-icon">⌂</div>
+<h3>නිවසටම මිනුම්</h3>
+<p>ඔබේ ස්ථානයට පැමිණ මිනුම් ලබාගැනීම නොමිලේ.</p>
+</div>
+
+<div class="why-card reveal">
+<div class="why-icon">♢</div>
+<h3>වගකීම</h3>
+<p>අවුරුදු 5ක ලිඛිත වගකීම — අදාළ කොන්දේසි අනුව.</p>
+</div>
+
+</div>
+</div>
 </section>
 
 <section class="contact" id="contact">
-  <div class="container">
-    <div class="contact-panel reveal">
-      <div class="kicker">LET'S CREATE SOMETHING TIMELESS</div>
-      <h2>ඔබේ නිවසට ගැළපෙන<br><span style="color:var(--gold2)">තේක්ක නිර්මාණය</span> අදම සැලසුම් කරමු.</h2>
-      <p>දොරවල්, ජනෙල්, පැන්ට්‍රි, පඩිපෙළ හෝ වෙනත් ලී වැඩක් ගැන විමසන්න.</p>
-      <div class="contact-actions">
-        <a class="btn" href="https://wa.me/94767181514?text=ආයුබෝවන්%20S.P%20Wood%20Craftsmen%2C%20මට%20තේක්ක%20වැඩක්%20කරගන්න%20ඕන" target="_blank" rel="noopener">🟢 WhatsApp: 076 718 1514</a>
-        <a class="btn btn-outline" href="#gallery">නිර්මාණ නැවත බලන්න</a>
-      </div>
-    </div>
-  </div>
+<div class="container">
+
+<div class="contact-panel reveal">
+<div class="kicker">LET'S CREATE SOMETHING TIMELESS</div>
+
+<h2>
+ඔබේ නිවසට ගැළපෙන<br>
+<span style="color:var(--gold2)">තේක්ක නිර්මාණය</span> අදම සැලසුම් කරමු.
+</h2>
+
+<p>දොරවල්, ජනෙල්, පැන්ට්‍රි, පඩිපෙළ හෝ වෙනත් ලී වැඩක් ගැන විමසන්න.</p>
+
+<div class="contact-actions">
+<a class="btn" href="https://wa.me/94767181514?text=ආයුබෝවන්%20S.P%20Wood%20Craftsmen%2C%20මට%20තේක්ක%20වැඩක්%20කරගන්න%20ඕන" target="_blank" rel="noopener">🟢 WhatsApp: 076 718 1514</a>
+<a class="btn btn-outline" href="#gallery">නිර්මාණ නැවත බලන්න</a>
+</div>
+
+</div>
+</div>
 </section>
+
 </main>
-<footer>© 2026 <strong>S.P WOOD CRAFTSMEN</strong> · Balangoda · 100% තේක්ක නිර්මාණ · 076 718 1514</footer>
-<a class="floating-wa" href="https://wa.me/94767181514?text=ආයුබෝවන්%20ප්‍රදීප්,%20Website%20එකෙන්%20ආවේ%20🪚%20තේක්ක%20දොර%20ජනෙල්%20ගැන%20දැනගන්න%20ඕන" target="_blank" rel="noopener">🪚 WhatsApp චැට් කරන්න</a>
+
+<footer>
+© 2026 <strong>S.P WOOD CRAFTSMEN</strong> · Balangoda · 100% තේක්ක නිර්මාණ · 076 718 1514
+</footer>
+
+<!-- WHATSAPP BUTTON -->
+
+<a class="floating-wa" href="https://wa.me/94767181514?text=ආයුබෝවන්%20ප්‍රදීප්,%20Website%20එකෙන්%20ආවේ%20🪚%20තේක්ක%20දොර%20ජනෙල්%20ගැන%20දැනගන්න%20ඕන" target="_blank" rel="noopener">
+🪚 WhatsApp චැට් කරන්න
+</a>
+
+<!-- ==================================
+     3D CARPENTER ASSISTANT HTML
+=================================== -->
+
+<div id="sp-assistant">
+
+<button class="sp-close" onclick="spHide()" aria-label="Close assistant">✕</button>
+
+<div class="sp-message" id="sp-message">
+ආයුබෝවන්! 👋<br>
+මම S.P Wood Craftsmen සහායකයා.
+ඔබට උදව් කරන්න සූදානම්!
+</div>
+
+<div class="sp-scene">
+
+<div class="sp-shadow"></div>
+
+<div class="sp-person">
+
+<div class="sp-helmet"></div>
+
+<div class="sp-ear left"></div>
+<div class="sp-ear right"></div>
+
+<div class="sp-face">
+<div class="sp-eyebrow left"></div>
+<div class="sp-eyebrow right"></div>
+<div class="sp-eye left"></div>
+<div class="sp-eye right"></div>
+<div class="sp-nose"></div>
+<div class="sp-moustache"></div>
+<div class="sp-mouth"></div>
+</div>
+
+<div class="sp-body">
+<div class="sp-shirt"></div>
+<div class="sp-apron"></div>
+</div>
+
+<div class="sp-arm left">
+<div class="sp-hand"></div>
+</div>
+
+<div class="sp-arm right">
+<div class="sp-hand"></div>
+</div>
+
+<div class="sp-leg left">
+<div class="sp-shoe"></div>
+</div>
+
+<div class="sp-leg right">
+<div class="sp-shoe"></div>
+</div>
+
+</div>
+</div>
+
+<div class="sp-controls">
+<button id="sp-talk-button" onclick="spSpeak()">
+🔊 මට කතා කරන්න
+</button>
+</div>
+
+</div>
+
+<!-- MAIN JAVASCRIPT -->
 
 <script>
+/* Mobile menu */
+
 const toggle=document.getElementById('menuToggle');
 const nav=document.getElementById('navlinks');
-toggle.addEventListener('click',()=>nav.classList.toggle('open'));
-nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
-const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+toggle.addEventListener('click',()=>{
+nav.classList.toggle('open');
+});
+
+nav.querySelectorAll('a').forEach(a=>{
+a.addEventListener('click',()=>{
+nav.classList.remove('open');
+});
+});
+
+/* Scroll reveal */
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('visible');
+observer.unobserve(entry.target);
+}
+});
+},{threshold:.12});
+
+document.querySelectorAll('.reveal').forEach(el=>{
+observer.observe(el);
+});
+
+/* =================================
+   3D CARPENTER VOICE ASSISTANT
+================================= */
+
+const spAssistant=document.getElementById('sp-assistant');
+const spMessage=document.getElementById('sp-message');
+const spButton=document.getElementById('sp-talk-button');
+
+let spIsSpeaking=false;
+
+function spSpeak(){
+
+if(!('speechSynthesis' in window)){
+spMessage.innerText='ඔබගේ Browser එකේ Voice පහසුකම නොමැත.';
+return;
+}
+
+if(spIsSpeaking){
+speechSynthesis.cancel();
+return;
+}
+
+const text=
+'ආයුබෝවන්! S P Wood Craftsmen වෙත ඔබව සාදරයෙන් පිළිගන්නවා. '+
+'අපි 1996 සිට බළන්ගොඩ ප්‍රදේශයේ තේක්ක ලී නිර්මාණ සිදු කරනවා. '+
+'ඔබට තේක්ක දොරවල්, ජනෙල්, පැන්ට්‍රි කබඩ්, පඩිපෙළ සහ තවත් නිර්මාණ ලබාගන්න පුළුවන්. '+
+'අපගේ සේවාවන් ගැන වැඩි විස්තර දැනගන්න WhatsApp හරහා අප සමග සම්බන්ධ වෙන්න. '+
+'ඔබට සුබ දවසක්!';
+
+speechSynthesis.cancel();
+
+const speech=new SpeechSynthesisUtterance(text);
+
+speech.lang='si-LK';
+speech.rate=0.88;
+speech.pitch=1.08;
+speech.volume=1;
+
+spIsSpeaking=true;
+
+spAssistant.classList.add('talking');
+spButton.innerText='⏹ කතාව නවත්වන්න';
+
+spMessage.innerText='ඔබට අපගේ නිර්මාණ ගැන විස්තර කියන්නම්! 🔊';
+
+speech.onend=()=>{
+spIsSpeaking=false;
+spAssistant.classList.remove('talking');
+spButton.innerText='🔊 නැවත කතා කරන්න';
+spMessage.innerText='ස්තුතියි! තවත් විස්තර අවශ්‍ය නම් මට නැවත කතා කරන්න.';
+};
+
+speech.onerror=()=>{
+spIsSpeaking=false;
+spAssistant.classList.remove('talking');
+spButton.innerText='🔊 නැවත උත්සාහ කරන්න';
+spMessage.innerText='Voice පහසුකම ක්‍රියාත්මක නොවේ. නැවත උත්සාහ කරන්න.';
+};
+
+speechSynthesis.speak(speech);
+}
+
+/* Close assistant */
+
+function spHide(){
+
+if('speechSynthesis' in window){
+speechSynthesis.cancel();
+}
+
+spIsSpeaking=false;
+spAssistant.classList.remove('talking');
+spAssistant.classList.add('hidden');
+
+}
+
+/* Stop speech when page is hidden */
+
+document.addEventListener('visibilitychange',()=>{
+if(document.hidden && 'speechSynthesis' in window){
+speechSynthesis.cancel();
+spIsSpeaking=false;
+spAssistant.classList.remove('talking');
+spButton.innerText='🔊 මට කතා කරන්න';
+}
+});
+
 </script>
 
-<!-- Tawk.to live chat: original property ID supplied in your template -->
+<!-- TAWK.TO LIVE CHAT -->
+
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date();
+
 (function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+var s1=document.createElement("script"),
+s0=document.getElementsByTagName("script")[0];
+
 s1.async=true;
 s1.src='https://embed.tawk.to/69f3a131db9e841c36b07185/1jnfqranu';
 s1.charset='UTF-8';
 s1.setAttribute('crossorigin','*');
+
 s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
+
 </body>
 </html>
