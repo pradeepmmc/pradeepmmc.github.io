@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="S.P Wood Craftsmen - 1996 සිට බළන්ගොඩින් 100% තේක්ක ලී නිර්මාණ. දොරවල්, ජනෙල්, පැන්ට්‍රි සහ 3D නිර්මාණකරණය.">
   <title>S.P Wood Craftsmen | 3D Teak Craftsmanship — Balangoda</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -328,178 +329,70 @@
       gap: 8px;
     }
 
-    /* Floating 3D craftsman guide */
+    /* Floating Craftsman Character Guide with Speech Bubble */
     .craftsman-guide {
       position: fixed;
       z-index: 150;
-      right: clamp(12px, 3vw, 42px);
-      top: var(--guide-top, 58vh);
-      width: 142px;
+      right: clamp(15px, 3vw, 40px);
+      bottom: 85px;
+      width: 140px;
       pointer-events: none;
-      transition: top .45s ease;
-      filter: drop-shadow(0 18px 18px rgba(0,0,0,.45));
+      transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      filter: drop-shadow(0 15px 25px rgba(0,0,0,0.5));
     }
+
     .guide-bubble {
       position: absolute;
-      right: 92px;
-      top: 2px;
-      width: min(245px, 55vw);
-      padding: 11px 14px;
-      border: 1px solid rgba(240,207,147,.65);
+      right: 130px;
+      bottom: 20px;
+      width: min(260px, 60vw);
+      padding: 12px 16px;
+      border: 1px solid rgba(240,207,147,0.65);
       border-radius: 15px 15px 4px 15px;
-      background: rgba(18,13,9,.94);
+      background: rgba(18,13,9,0.96);
       color: #f5efe6;
       font-family: 'Noto Sans Sinhala', sans-serif;
-      font-size: 12px;
-      line-height: 1.65;
-      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+      font-size: 12.5px;
+      line-height: 1.6;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
       backdrop-filter: blur(10px);
+      animation: bubblePop 0.3s ease;
     }
+
     .guide-bubble strong {
       display: block;
       color: var(--gold-light);
-      font-size: 11px;
-      margin-bottom: 3px;
-    }
-    .guide-person {
-      position: relative;
-      width: 100px;
-      height: 178px;
-      margin-left: auto;
-      transform-origin: 50% 90%;
-      animation: guide-bob .55s ease-in-out infinite alternate;
-    }
-    .guide-head {
-      position: absolute;
-      z-index: 3;
-      top: 3px;
-      left: 31px;
-      width: 43px;
-      height: 47px;
-      border-radius: 46% 46% 43% 43%;
-      background: linear-gradient(120deg,#f7c99f 5%,#d99565 58%,#9f5e3e 100%);
-      box-shadow: inset -5px -3px 7px rgba(75,34,16,.25), inset 4px 3px 6px rgba(255,255,255,.4);
-    }
-    .guide-hair {
-      position: absolute;
-      z-index: 4;
-      top: 0;
-      left: 29px;
-      width: 46px;
-      height: 20px;
-      border-radius: 50% 50% 25% 20%;
-      background: linear-gradient(135deg,#302016,#090706);
-      transform: rotate(-5deg);
-    }
-    .guide-face {
-      position: absolute;
-      top: 21px;
-      left: 10px;
-      display: flex;
-      gap: 12px;
-    }
-    .guide-face i {
-      width: 5px;
-      height: 6px;
-      border-radius: 50%;
-      background: #24140e;
-    }
-    .guide-smile {
-      position: absolute;
-      left: 18px;
-      top: 32px;
-      width: 10px;
-      height: 5px;
-      border-bottom: 2px solid #793f31;
-      border-radius: 0 0 10px 10px;
-    }
-    .guide-body {
-      position: absolute;
-      top: 48px;
-      left: 21px;
-      width: 63px;
-      height: 77px;
-      border-radius: 17px 17px 10px 10px;
-      background: linear-gradient(110deg,#d6a45d,#8e542b 55%,#57331e);
-      box-shadow: inset 7px 0 8px rgba(255,255,255,.16), inset -8px 0 10px rgba(0,0,0,.25);
-    }
-    .guide-apron {
-      position: absolute;
-      top: 58px;
-      left: 32px;
-      width: 43px;
-      height: 64px;
-      border-radius: 8px 8px 5px 5px;
-      background: linear-gradient(100deg,#59402c,#21170f);
-      border: 1px solid rgba(240,207,147,.4);
-      clip-path: polygon(15% 0,85% 0,100% 100%,0 100%);
-    }
-    .guide-arm {
-      position: absolute;
-      z-index: 1;
-      top: 57px;
-      width: 15px;
-      height: 65px;
-      border-radius: 12px;
-      background: linear-gradient(90deg,#c98b59,#f0bd8e,#9b6240);
-      transform-origin: top center;
-    }
-    .guide-arm.left { left: 12px; animation: arm-left .55s ease-in-out infinite alternate; }
-    .guide-arm.right { right: 5px; animation: arm-right .55s ease-in-out infinite alternate; }
-    .guide-leg {
-      position: absolute;
-      top: 119px;
-      width: 19px;
-      height: 48px;
-      border-radius: 5px 5px 8px 8px;
-      background: linear-gradient(90deg,#26374b,#506783,#182536);
-      transform-origin: top center;
-    }
-    .guide-leg.left { left: 32px; animation: leg-left .55s ease-in-out infinite alternate; }
-    .guide-leg.right { left: 56px; animation: leg-right .55s ease-in-out infinite alternate; }
-    .guide-shoe {
-      position: absolute;
-      bottom: -3px;
-      left: -5px;
-      width: 29px;
-      height: 11px;
-      border-radius: 10px 8px 5px 5px;
-      background: linear-gradient(#e8d8c4,#8b735c);
-    }
-    .guide-tool {
-      position: absolute;
-      right: -2px;
-      top: 93px;
-      width: 24px;
-      height: 7px;
-      border-radius: 4px;
-      background: #d7b36e;
-      transform: rotate(-35deg);
-      box-shadow: 0 0 8px rgba(240,207,147,.25);
-    }
-    .guide-shadow {
-      width: 76px;
-      height: 13px;
-      margin: -1px 5px 0 auto;
-      border-radius: 50%;
-      background: rgba(0,0,0,.42);
-      filter: blur(5px);
-    }
-    @keyframes guide-bob { from { transform: translateY(0) rotate(-1deg); } to { transform: translateY(-5px) rotate(1deg); } }
-    @keyframes arm-left { from { transform: rotate(22deg); } to { transform: rotate(-22deg); } }
-    @keyframes arm-right { from { transform: rotate(-22deg); } to { transform: rotate(22deg); } }
-    @keyframes leg-left { from { transform: rotate(-15deg); } to { transform: rotate(15deg); } }
-    @keyframes leg-right { from { transform: rotate(15deg); } to { transform: rotate(-15deg); } }
-    @media (max-width: 700px) {
-      .craftsman-guide { right: 5px; transform: scale(.76); transform-origin: right center; }
-      .guide-bubble { right: 75px; width: min(205px, 54vw); font-size: 10px; }
-      .scene-body { padding: 18px; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .guide-person, .guide-arm, .guide-leg { animation: none !important; }
-      html { scroll-behavior: auto; }
+      font-size: 12px;
+      margin-bottom: 4px;
     }
 
+    .craftsman-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      animation: floatChar 3s ease-in-out infinite;
+    }
+
+    @keyframes floatChar {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    @keyframes bubblePop {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @media (max-width: 700px) {
+      .craftsman-guide { right: 10px; width: 110px; bottom: 75px; }
+      .guide-bubble { right: 100px; width: min(210px, 55vw); font-size: 11px; padding: 10px; }
+      .scene-body { padding: 18px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .craftsman-guide, .craftsman-img, .guide-bubble { animation: none !important; }
+      html { scroll-behavior: auto; }
+    }
   </style>
 </head>
 <body>
@@ -523,14 +416,14 @@
 
   <section class="hero" id="top">
     <div class="badge">BALANGODA • EST. 1996 • 100% SEASONED TEAK</div>
-    <h1>සම්ප්‍රදායික තේක්ක වඩු කලාව සහ නවීන 3D නිර්මාණකරණය</h1>
-    <p>පිටුව පහළට scroll කරන විට එක් එක් ලී නිර්මාණය සකස් කරන ආකාරය වෙන වෙනම 3D වීඩියෝ 6කින් නරඹන්න.</p>
+    <h1>සම්ප්‍රදායික තේක්ක වඩු කලාව සහ නවීන වීඩියෝ නිර්මාණකරණය</h1>
+    <p>පිටුව පහළට scroll කරන විට අපේ වඩු කාර්මිකයා ඔබට එක් එක් ලී නිර්මාණය සකස් කරන ආකාරය පැහැදිලි කරයි.</p>
   </section>
 
   <main class="scenes-container" id="scenes">
 
     <!-- Player 01 -->
-    <article class="scene-card">
+    <article class="scene-card" data-step="0">
       <div class="video-wrap">
         <video class="scroll-video" src="video_1.mp4" poster="door-design-1.jpg" muted loop playsinline controls preload="metadata"></video>
         <div class="video-badge">
@@ -550,7 +443,7 @@
     </article>
 
     <!-- Player 02 -->
-    <article class="scene-card">
+    <article class="scene-card" data-step="1">
       <div class="video-wrap">
         <video class="scroll-video" src="video_2.mp4" poster="pantry1.jpg" muted loop playsinline controls preload="metadata"></video>
         <div class="video-badge">
@@ -570,7 +463,7 @@
     </article>
 
     <!-- Player 03 -->
-    <article class="scene-card">
+    <article class="scene-card" data-step="2">
       <div class="video-wrap">
         <video class="scroll-video" src="video_3.mp4" poster="stair1.jpg" muted loop playsinline controls preload="metadata"></video>
         <div class="video-badge">
@@ -590,7 +483,7 @@
     </article>
 
     <!-- Player 04 -->
-    <article class="scene-card">
+    <article class="scene-card" data-step="3">
       <div class="video-wrap">
         <video class="scroll-video" src="video_4.mp4" poster="partition-1.jpg" muted loop playsinline controls preload="metadata"></video>
         <div class="video-badge">
@@ -610,7 +503,7 @@
     </article>
 
     <!-- Player 05 -->
-    <article class="scene-card">
+    <article class="scene-card" data-step="4">
       <div class="video-wrap">
         <video class="scroll-video" src="video_5.mp4" poster="wardrobe-1.jpg" muted loop playsinline controls preload="metadata"></video>
         <div class="video-badge">
@@ -630,7 +523,7 @@
     </article>
 
     <!-- Player 06 -->
-    <article class="scene-card">
+    <article class="scene-card" data-step="5">
       <div class="video-wrap">
         <video class="scroll-video" src="video_6.mp4" poster="roof-1.jpg" muted loop playsinline controls preload="metadata"></video>
         <div class="video-badge">
@@ -676,22 +569,14 @@
     </div>
   </section>
 
-
+  <!-- Floating Character Guide with Real Image -->
   <aside class="craftsman-guide" id="craftsmanGuide" aria-label="S.P Wood Craftsmen guide">
     <div class="guide-bubble" id="guideBubble" aria-live="polite">
       <strong>S.P WOOD CRAFTSMEN</strong>
-      ආයුබෝවන්! අපගේ තේක්ක නිර්මාණ බලන්න මා සමඟ පහළට එන්න.
+      ආයුබෝවන්! අපගේ තේක්ක නිර්මාණ බලන්න මා සමඟ පහළට යන්න.
     </div>
-    <div class="guide-person">
-      <div class="guide-hair"></div>
-      <div class="guide-head"><div class="guide-face"><i></i><i></i></div><div class="guide-smile"></div></div>
-      <div class="guide-arm left"></div><div class="guide-arm right"></div>
-      <div class="guide-body"></div><div class="guide-apron"></div>
-      <div class="guide-leg left"><span class="guide-shoe"></span></div>
-      <div class="guide-leg right"><span class="guide-shoe"></span></div>
-      <div class="guide-tool"></div>
-    </div>
-    <div class="guide-shadow"></div>
+    <!-- ඔබ එවූ රූපය මෙහි යොදා ඇත -->
+    <img src="craftsman.png" alt="Carpenter Guide" class="craftsman-img">
   </aside>
 
   <footer id="contact">
@@ -699,23 +584,22 @@
     <p style="margin-top:6px;">නිවසටම පැමිණ මිනුම් ලබාගැනීම සහ ඇස්තමේන්තු සඳහා අප හා සම්බන්ධ වන්න.</p>
   </footer>
 
-  <a class="wa-btn" href="https://wa.me/94700000000?text=Hello%20S.P%20Wood%20Craftsmen,%20මට%20තේක්ක%20ලී%20නිර්මාණයක්%20ගැන%20විස්තර%20දැනගන්න%20ඕනේ." target="_blank" rel="noopener">
-    WhatsApp සම්බන්ධ වන්න
+  <a class="wa-btn" href="https://wa.me/94767181514?text=ආයුබෝවන්%20S.P%20Wood%20Craftsmen,%20මට%20තේක්ක%20ලී%20නිර්මාණයක්%20ගැන%20විස්තර%20දැනගන්න%20ඕනේ." target="_blank" rel="noopener">
+    🟢 WhatsApp සම්බන්ධ වන්න
   </a>
 
   <script>
     const cards = [...document.querySelectorAll('.scene-card')];
     const videos = [...document.querySelectorAll('.scroll-video')];
-    const guide = document.getElementById('craftsmanGuide');
     const guideBubble = document.getElementById('guideBubble');
 
     const guideMessages = [
-      ['ප්‍රධාන තේක්ක දොරවල්', 'අපි තෝරාගත් තේක්ක ලීයෙන් දොර සහ උළුවහු නිවැරදිව සකස් කර සවි කරනවා.'],
-      ['නවීන පැන්ට්‍රි', 'ඔබගේ මුළුතැන්ගෙයට ගැළපෙන පැන්ට්‍රි කබඩ් මිනුම් අනුව නිර්මාණය කරනවා.'],
-      ['තේක්ක පඩිපෙළ', 'ශක්තිමත් පඩි සහ අලංකාර අත්වැට සමඟ පඩිපෙළ නිර්මාණය කරනවා.'],
-      ['ලී පාටිෂන්', 'නිවසේ අභ්‍යන්තරයට ගැළපෙන අලංකාර ලී පාටිෂන් සකස් කරනවා.'],
-      ['ඇඳුම් අල්මාරි', 'ඔබට අවශ්‍ය ප්‍රමාණයට සහ සැලසුමට අනුව අල්මාරි නිර්මාණය කරනවා.'],
-      ['වහල සහ ජනෙල්', 'වහල සැකිලි, ජනෙල් සහ ලූවර් වැඩත් සැලකිල්ලෙන් නිම කරනවා.']
+      ['ප්‍රධාන තේක්ක දොරවල්', 'මෙන්න අපේ ප්‍රධාන තේක්ක දොර සහ උළුවහු සවිකරන ආකාරය. 100% කල්පවත්නා තේක්ක ලීයෙන් නිම කර ඇත.'],
+      ['නවීන පැන්ට්‍රි කබඩ්', 'මුළුතැන්ගෙයට අලංකාරය ගෙනෙන පැන්ට්‍රි කබඩ් පද්ධතියක්. මිනුම් අනුව නිමවා ඇත.'],
+      ['තේක්ක පඩිපෙළ', 'ශක්තිමත් තේක්ක ලී පඩි සහ අලංකාර අත්වැට සමඟ පඩිපෙළ නිර්මාණය.'],
+      ['ලී පාටිෂන් (Partitions)', 'නිවසේ ඉඩකඩ අලංකාරව බෙදා වෙන් කිරීමට නවීන තේක්ක පාටිෂන් ක්‍රමයක්.'],
+      ['ඇඳුම් අල්මාරි (Wardrobes)', 'දිගු කල් පවතින ස්වභාවික තේක්ක නිමාවකින් යුත් ඇඳුම් අල්මාරි නිර්මාණය.'],
+      ['වහල සහ ජනෙල් වැඩ', 'නිවසේ වහල සැකිලි, ජනෙල් පියන් සහ වාතාශ්‍රය ලැබෙන ලූවර් වැඩ.']
     ];
 
     function setGuideMessage(index) {
@@ -724,8 +608,7 @@
       guideBubble.innerHTML = '<strong>' + item[0] + '</strong>' + item[1];
     }
 
-    // Play the video belonging to the section currently in view.
-    // Muted inline playback is used because browsers restrict audible autoplay.
+    // Video play/pause on scroll intersection
     const videoObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         const video = entry.target.querySelector('video');
@@ -740,54 +623,26 @@
           video.playsInline = true;
           const playAttempt = video.play();
           if (playAttempt && typeof playAttempt.catch === 'function') {
-            playAttempt.catch(() => {
-              // The visible video still has native controls if autoplay is blocked.
-            });
+            playAttempt.catch(() => {});
           }
+
+          // Update character guide message based on active card
+          const index = cards.indexOf(entry.target);
+          if (index >= 0) setGuideMessage(index);
+
         } else {
           entry.target.classList.remove('active');
           video.pause();
         }
       });
-    }, { threshold: 0.12, rootMargin: '-8% 0px -12% 0px' });
+    }, { threshold: 0.4, rootMargin: '-10% 0px -10% 0px' });
 
     cards.forEach((card) => videoObserver.observe(card));
 
-    // Keep playback paused when the visitor changes browser tabs.
+    // Pause videos when switching tabs
     document.addEventListener('visibilitychange', () => {
       if (document.hidden) videos.forEach((video) => video.pause());
     });
-
-    // Update the guide's Sinhala explanation according to the active scene.
-    const messageObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const index = cards.indexOf(entry.target);
-          if (index >= 0) setGuideMessage(index);
-        }
-      });
-    }, { threshold: 0.25 });
-
-    cards.forEach((card) => messageObserver.observe(card));
-
-    // The guide walks down the side of the page as the visitor scrolls.
-    let scrollTicking = false;
-    function updateGuidePosition() {
-      if (!guide) return;
-      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = maxScroll > 0 ? window.scrollY / maxScroll : 0;
-      const top = 18 + progress * 53;
-      guide.style.setProperty('--guide-top', top + 'vh');
-      scrollTicking = false;
-    }
-    window.addEventListener('scroll', () => {
-      if (!scrollTicking) {
-        window.requestAnimationFrame(updateGuidePosition);
-        scrollTicking = true;
-      }
-    }, { passive: true });
-    window.addEventListener('resize', updateGuidePosition);
-    updateGuidePosition();
   </script>
 
 </body>
