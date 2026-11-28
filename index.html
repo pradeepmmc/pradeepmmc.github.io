@@ -685,24 +685,25 @@ animation:pulse 2.2s infinite
 .reveal.visible{opacity:1;transform:translateY(0)}
 
 /* =================================
-   3D CARPENTER ASSISTANT
+   3D CARPENTER ASSISTANT (SCROLL-DRIVEN)
 ================================= */
 
 #sp-assistant{
 position:fixed;
 left:18px;
 bottom:16px;
-width:205px;
+width:225px;
 z-index:100;
 text-align:center;
 font-family:'Noto Sans Sinhala',sans-serif;
-perspective:900px;
-transition:opacity .4s,transform .4s;
+perspective:950px;
+transition:opacity .45s cubic-bezier(.22,1,.36,1), transform .18s cubic-bezier(.22,1,.36,1);
+transform-style:preserve-3d;
 }
 
 #sp-assistant.hidden{
 opacity:0;
-transform:translateY(30px);
+transform:translateY(40px) scale(.9);
 pointer-events:none
 }
 
@@ -723,32 +724,52 @@ font-size:15px
 
 .sp-message{
 position:relative;
-background:linear-gradient(135deg,#fff3d9,#d9b779);
-color:#392413;
-padding:12px 13px;
-border-radius:15px 15px 4px 15px;
-font-size:11px;
+background:linear-gradient(135deg,#fff5df,#dec084);
+color:#341f0e;
+padding:12px 14px;
+border-radius:16px 16px 4px 16px;
+font-size:11.5px;
 font-weight:700;
-line-height:1.75;
-box-shadow:0 5px 25px #0008;
-border:1px solid #e4c581;
-margin:0 0 5px;
-min-height:58px;
-transition:all .3s;
+line-height:1.78;
+box-shadow:0 10px 28px rgba(0,0,0,.65), 0 0 18px rgba(216,179,106,.22);
+border:1px solid #e7c988;
+margin:0 0 6px;
+min-height:62px;
+transition:transform .3s ease, box-shadow .3s ease;
+}
+
+.sp-message.pop{
+transform:scale(1.04) translateY(-2px);
+box-shadow:0 14px 34px rgba(0,0,0,.75), 0 0 24px rgba(241,217,156,.38);
 }
 
 .sp-message:after{
 content:"";
 position:absolute;
-right:23px;
+right:26px;
 bottom:-9px;
 border-width:9px 0 0 12px;
 border-style:solid;
-border-color:transparent transparent transparent #d9b779
+border-color:transparent transparent transparent #dec084
 }
 
 .sp-scene{
-height:183px;
+height:185px;
+position:relative;
+transform-style:preserve-3d;
+}
+
+.sp-3d-tilt{
+height:100%;
+width:100%;
+position:relative;
+transform-style:preserve-3d;
+transition:transform .22s ease-out;
+}
+
+.sp-float-inner{
+height:100%;
+width:100%;
 position:relative;
 transform-style:preserve-3d;
 animation:sp-float 3.2s ease-in-out infinite;
@@ -757,11 +778,11 @@ animation:sp-float 3.2s ease-in-out infinite;
 .sp-shadow{
 position:absolute;
 bottom:2px;
-left:56px;
-width:95px;
+left:65px;
+width:96px;
 height:17px;
 border-radius:50%;
-background:#0008;
+background:#0009;
 filter:blur(7px);
 animation:sp-shadow 3.2s infinite
 }
@@ -770,7 +791,7 @@ animation:sp-shadow 3.2s infinite
 position:absolute;
 width:145px;
 height:175px;
-left:30px;
+left:38px;
 bottom:3px;
 transform-style:preserve-3d;
 }
@@ -981,7 +1002,8 @@ box-shadow:inset -4px -3px 5px #542b1a55
 
 .sp-arm.left{
 left:17px;
-transform:rotate(24deg)
+transform:rotate(24deg);
+transition:transform .4s ease;
 }
 
 .sp-arm.right{
@@ -991,7 +1013,11 @@ transition:transform .4s ease;
 }
 
 #sp-assistant.pointing .sp-arm.right{
-transform:rotate(-118deg);
+transform:rotate(-122deg);
+}
+
+#sp-assistant.pointing .sp-arm.left{
+transform:rotate(38deg);
 }
 
 #sp-assistant.talking .sp-arm.right{
@@ -1018,11 +1044,30 @@ width:27px;
 height:27px;
 background:linear-gradient(90deg,#372219,#17100c);
 border-radius:5px 5px 9px 9px;
-z-index:1
+z-index:1;
+transition:transform .2s ease;
 }
 
 .sp-leg.left{left:48px}
 .sp-leg.right{left:83px}
+
+#sp-assistant.scrolling-active .sp-leg.left{
+animation:sp-step-l .45s ease-in-out infinite alternate;
+}
+
+#sp-assistant.scrolling-active .sp-leg.right{
+animation:sp-step-r .45s ease-in-out infinite alternate;
+}
+
+@keyframes sp-step-l{
+from{transform:translateY(0) rotate(0deg)}
+to{transform:translateY(-4px) rotate(12deg)}
+}
+
+@keyframes sp-step-r{
+from{transform:translateY(-4px) rotate(-12deg)}
+to{transform:translateY(0) rotate(0deg)}
+}
 
 .sp-shoe{
 position:absolute;
@@ -1049,7 +1094,7 @@ margin-top:2px
 border:1px solid #e6c17b;
 background:linear-gradient(135deg,#e8c984,#ae7b37);
 color:#241609;
-padding:9px 13px;
+padding:9px 14px;
 border-radius:25px;
 font-size:11px;
 font-weight:900;
@@ -1069,13 +1114,13 @@ cursor:wait
 }
 
 @keyframes sp-float{
-0%,100%{transform:translateY(0) rotateY(-4deg)}
-50%{transform:translateY(-8px) rotateY(4deg)}
+0%,100%{transform:translateY(0px)}
+50%{transform:translateY(-7px)}
 }
 
 @keyframes sp-shadow{
 0%,100%{transform:scale(1);opacity:.65}
-50%{transform:scale(.8);opacity:.35}
+50%{transform:scale(.82);opacity:.38}
 }
 
 @keyframes sp-wave{
@@ -1156,14 +1201,6 @@ section{padding:75px 0}
 .cinema-hud{padding:8px 10px;left:10px;right:10px;bottom:10px}
 .hud-badge{font-size:10px}
 .hud-progress-track{max-width:90px}
-
-/* Mobile character */
-#sp-assistant{
-left:5px;
-bottom:9px;
-transform:scale(.76);
-transform-origin:bottom left
-}
 }
 
 @media(prefers-reduced-motion:reduce){
@@ -1206,7 +1243,7 @@ html{scroll-behavior:auto}
 
 <main>
 
-<section class="hero" id="home">
+<section class="hero" id="home" data-explain="ආයුබෝවන්! මම S.P Wood Craftsmen 3D ශිල්පියා. 1996 සිට බළන්ගොඩින් 100% තේක්ක ලී නිර්මාණ කරන හැටි පහළට Scroll කරලා බලන්න.">
 <div class="container">
 
 <div class="hero-content">
@@ -1253,7 +1290,7 @@ html{scroll-behavior:auto}
 <div class="section-head reveal">
 <div class="kicker">INTERACTIVE 3D CRAFTSMANSHIP</div>
 <h2>අපේ 3D වැඩමුළුව සජීවීව නරඹන්න</h2>
-<p>පහළට Scroll කරන විට අපගේ 3D ශිල්පීන් දෙදෙනා ප්‍රධාන දොරවල්, ජනෙල්, පැන්ට්‍රි කබඩ්, Partition සහ වක්‍රාකාර පඩිපෙළ නිමවන ආකාරය දැකගන්න.</p>
+<p>පහළට Scroll කරන විට 3D ශිල්පියා පහළට ගමන් කරමින් එක් එක් නිර්මාණය හදන ආකාරය පැහැදිලි කර දෙයි.</p>
 </div>
 
 <div class="scrolly-stage">
@@ -1291,77 +1328,77 @@ html{scroll-behavior:auto}
 <article class="scrolly-card active"
 data-step="0"
 data-hud="01 · ප්‍රධාන දොර සවි කිරීම"
-data-speech="බලන්න, මේ අපේ සුවිශේෂී තේක්ක ප්‍රධාන දොර! ඉතාම නිවැරදි මිනුම් වලට අනුව ශක්තිමත් සරනේරු සහ අගුළු සවි කරන ආකාරයයි මේ.">
+data-speech="මෙන්න මේ ආකාරයට තමයි තේක්ක ප්‍රධාන දොර හදන්නේ: මුලින්ම දොර පියනේ මට්ටම බලලා, සරනේරු තුන හරියටම උළුවස්සට ගැළපෙන විදිහට සවි කරලා, පියන ඇරෙන වහන සුමට බව පරීක්ෂා කරනවා.">
 <span class="step-tag">SCENE 01 · MAIN DOOR</span>
-<h3>ප්‍රධාන දොර · සියුම් නිමාව සහ සවි කිරීම</h3>
-<p>නිවසේ ප්‍රධාන පිවිසුමට අභිමානයක් එක් කරන Fluted Teak ප්‍රධාන දොර, ඉතාම නිවැරදි මිනුම් සහ සරනේරු සවි කිරීම් සමඟ නිමවන ආකාරය.</p>
+<h3>ප්‍රධාන දොර හදන විදිහ · සවි කිරීම</h3>
+<p>මුලින්ම දොර පියනේ මට්ටම පරීක්ෂා කර, සරනේරු නිවැරදි කෝණයට සවි කරමින් දොර පියන සුමටව ක්‍රියා කරන සේ සකස් කරන ආකාරය.</p>
 <div class="step-meta">
 <span class="step-pill">100% පදම් කළ තේක්ක</span>
-<span class="step-pill">නිවැරදි සරනේරු පෙළගැස්ම</span>
+<span class="step-pill">සරනේරු පෙළගැස්ම</span>
 </div>
 </article>
 
 <article class="scrolly-card"
 data-step="1"
 data-hud="02 · පැන්ට්‍රි කබඩ් නිර්මාණය"
-data-speech="මේ තියෙන්නේ නවීන තේක්ක පැන්ට්‍රි කබඩ් පද්ධතිය. උඩ සහ යට කබඩ් පියන් ඉතාම සියුම්ව පෙළගස්වලා සවි කරන හැටි බලන්න.">
+data-speech="තේක්ක පැන්ට්‍රි කබඩ් හදනකොට: උඩ කබඩ් බිත්තියට ඉතාම ශක්තිමත්ව අල්ලලා, පහළ කබඩ් වල දොර පියන් අතර පරතරය සමාන වෙන විදිහට hinges adjust කරලා තමයි සවි කරන්නේ.">
 <span class="step-tag">SCENE 02 · PANTRY CUPBOARDS</span>
-<h3>නවීන තේක්ක පැන්ට්‍රි කබඩ් පද්ධතිය</h3>
-<p>මුළුතැන්ගෙයි ඉඩකඩ උපරිමයෙන් ප්‍රයෝජනයට ගනිමින්, උඩ සහ යට කබඩ් පියන් සියුම්ව පෙළගස්වා සවි කරන අපේ කණ්ඩායමේ වැඩ පිළිවෙළ.</p>
+<h3>පැන්ට්‍රි කබඩ් හදන විදිහ</h3>
+<p>උඩ සහ යට කබඩ් කොටස් නිවැරදි මට්ටමට සවි කර, සෑම පියනක්ම එකම රේඛාවකට සිටින සේ සකස් කරන ශිල්පීය ක්‍රමය.</p>
 <div class="step-meta">
-<span class="step-pill">ජලයට ඔරොත්තු දෙන නිමාව</span>
-<span class="step-pill">Soft-Close Fittings</span>
+<span class="step-pill">මට්ටම් කළ පියන්</span>
+<span class="step-pill">ශක්තිමත් සවි කිරීම</span>
 </div>
 </article>
 
 <article class="scrolly-card"
 data-step="2"
 data-hud="03 · වක්‍රාකාර පඩිපෙළ අත්වැට"
-data-speech="වක්‍රාකාර පඩිපෙළක අත්වැට සහ කණු හරියටම මට්ටම් කරලා සවි කරන්න ලොකු පළපුරුද්දක් ඕන. අපේ ශිල්පීන් ඒක කරන හැටි බලන්න!">
+data-speech="වක්‍රාකාර පඩිපෙළක අත්වැට හදන්නේ මෙහෙමයි: වක්‍රය දිගේ යන කණු වල උස සහ ඇලය Spirit Level එකෙන් මැනලා, අත්වැටේ වක්‍ර හැඩය කැඩෙන්නේ නැතුව සම්බන්ධ කරනවා.">
 <span class="step-tag">SCENE 03 · CURVED BALUSTRADE</span>
-<h3>වක්‍රාකාර පඩිපෙළ සහ අත්වැට නිමාව</h3>
-<p>Spirit Level භාවිතා කරමින් වක්‍රාකාර පඩිපෙළේ අත්වැට සහ ලී කණු සෑම කෝණයකින්ම නිවැරදි මට්ටමට සවි කරන සියුම් ශිල්පීය ක්‍රමය.</p>
+<h3>වක්‍රාකාර පඩිපෙළ අත්වැට හදන විදිහ</h3>
+<p>වක්‍ර හැඩයට අනුව ලී කණු සහ අත්වැට සම්බන්ධ කරමින්, ආරක්ෂාව සහ අලංකාරය එකට ගෙන එන නිමාව.</p>
 <div class="step-meta">
-<span class="step-pill">නිවැරදි වක්‍ර හැඩතල</span>
-<span class="step-pill">ශක්තිමත් අත්වැට</span>
+<span class="step-pill">Spirit Level මිනුම්</span>
+<span class="step-pill">සුමට වක්‍ර නිමාව</span>
 </div>
 </article>
 
 <article class="scrolly-card"
 data-step="3"
 data-hud="04 · පඩිපෙළ පියගැටපෙළ සවි කිරීම"
-data-speech="පඩිපෙළේ හැම පියගැටයක්ම එකින් එක මැනලා, මට්ටම් කරලා, ශක්තිමත්ව සවි කරන ආකාරයයි මේ පේන්නේ.">
+data-speech="පඩිපෙළේ පියගැට හදනකොට: හැම පියගැටයකම පළල සහ උස එක සමානව තියන්න ඕනේ. එතකොට නඟිනකොට බහිනකොට කකුලට හොඳ සමබරතාවයක් ලැබෙනවා.">
 <span class="step-tag">SCENE 04 · STAIRCASE TREADS</span>
-<h3>තේක්ක පඩිපෙළ පියගැටපෙළ සවි කිරීම</h3>
-<p>සෑම පියගැටයක්ම මිනුම් පටියෙන් සහ ලෙවල් එකෙන් පරීක්ෂා කර, ශබ්ද නොනැගෙන සේ ශක්තිමත්ව සවි කරන වෘත්තීය නිමාව.</p>
+<h3>පඩිපෙළ පියගැට හදන විදිහ</h3>
+<p>සෑම පියගැටයක්ම නිවැරදි මිනුමට සකස් කර, පාදයට සැපපහසු සහ ශක්තිමත් පඩිපෙළක් ගොඩනඟන ආකාරය.</p>
 <div class="step-meta">
-<span class="step-pill">ඝන තේක්ක පියගැට</span>
-<span class="step-pill">දිගුකාලීන ශක්තිය</span>
+<span class="step-pill">සමාන පියගැට උස</span>
+<span class="step-pill">ශබ්ද නොනැගෙන නිමාව</span>
 </div>
 </article>
 
 <article class="scrolly-card"
 data-step="4"
 data-hud="05 · දොර සහ ජනෙල් පියන් සවි කිරීම"
-data-speech="දොර උළුවස්සට දොර පියන් සවි කරන ගමන්ම, ඒ ළඟම තියෙන ජනෙල් රාමුවට ලී ලූවර් පියන් සවි කරන අපූරු දර්ශනය බලන්න.">
+data-speech="දොරයි ජනෙල් පියනුයි එකට සවි කරනකොට: දොර උළුවස්සේ මට්ටම වගේම ජනෙල් රාමුවේ ලී ලූවර් පියන් ඇරෙන විදිහත් හරියටම check කරලා තමයි වැඩේ ඉවර කරන්නේ.">
 <span class="step-tag">SCENE 05 · DOORS & WINDOWS</span>
-<h3>ප්‍රධාන දොර සහ ජනෙල් පියන් එකවර නිමාව</h3>
-<p>දොර පියන් සවි කරන අතරතුරම ජනෙල් රාමුවට පිත්තල සරනේරු සහ ලී පියන් සවි කරමින් නිවසේ සම්පූර්ණ පෙනුම ඔප්නංවන ආකාරය.</p>
+<h3>දොර සහ ජනෙල් පියන් හදන විදිහ</h3>
+<p>දොර පියන් සහ ජනෙල් ලූවර් පියන් එකම ගුණාත්මකභාවයකින් සවි කර, නිවසේ වාතාශ්‍රය සහ පෙනුම සම්පූර්ණ කරන අයුරු.</p>
 <div class="step-meta">
-<span class="step-pill">පිත්තල සරනේරු</span>
-<span class="step-pill">වාතාශ්‍රය සහ අලංකාරය</span>
+<span class="step-pill">ලී ලූවර් පියන්</span>
+<span class="step-pill">නිවැරදි ගැළපීම</span>
 </div>
 </article>
 
 <article class="scrolly-card"
 data-step="5"
 data-hud="06 · සාලය සහ කුස්සිය Partition"
-data-speech="සාලයයි කෑම කාමරයයි ලස්සනට වෙන් කරන නවීන තේක්ක Partition නිර්මාණයයි මේ. ඕනෑම සැලසුමකට අපි මේක හදලා දෙනවා!">
+data-speech="සාලයයි කුස්සියයි වෙන් කරන Partition එක හදන්නේ: ඉඩකඩ අවහිර නොවී ආලෝකය සහ වාතය එන විදිහට ලී තීරු පෙළගස්වලා, පොළවටයි වහලටයි හොඳින් සවි කරලායි.">
 <span class="step-tag">SCENE 06 · MODERN PARTITION</span>
-<h3>සාලය සහ කෑම කාමරය වෙන් කරන Partition</h3>
-<p>නවීන නිවසක අභ්‍යන්තර අලංකාරය දෙගුණ කරන තේක්ක Wood Partition නිර්මාණය, සම්පූර්ණයෙන්ම මට්ටම් කර සවි කරන අවසන් අදියර.</p>
+<h3>Partition හදන විදිහ</h3>
+<p>නවීන නිවසක ඉඩකඩ අලංකාරව බෙදා වෙන් කරන තේක්ක Partition නිර්මාණය, ශක්තිමත්ව සහ පිළිවෙළට සවි කරන අවසන් අදියර.</p>
 <div class="step-meta">
-<span class="step-pill">Custom Architectural Design</span>
+<span class="step-pill">ආලෝකය සහ ඉඩකඩ</span>
 <span class="step-pill">1996 සිට විශ්වාසය</span>
 </div>
 </article>
@@ -1372,7 +1409,7 @@ data-speech="සාලයයි කෑම කාමරයයි ලස්සන�
 </div>
 </section>
 
-<section class="intro" id="about">
+<section class="intro" id="about" data-explain="අපි බළන්ගොඩ ඉඳන් 1996 ඉඳන්ම 100% තේක්ක ලීයෙන් දොරවල්, ජනෙල්, පැන්ට්‍රි සහ අනෙකුත් නිර්මාණ කරනවා. නිවසටම ඇවිත් නොමිලේ මිනුම් අරන් අවුරුදු 5ක වගකීමකුත් දෙනවා.">
 <div class="container intro-grid">
 
 <div class="intro-image reveal">
@@ -1403,7 +1440,7 @@ data-speech="සාලයයි කෑම කාමරයයි ලස්සන�
 </div>
 </section>
 
-<section class="gallery-section" id="gallery">
+<section class="gallery-section" id="gallery" data-explain="මේ Gallery එකේ තියෙන්නේ අපි හදපු තේක්ක දොරවල්, පැන්ට්‍රි, Partition, වහල, ඇඳුම් කබඩ්, ජනෙල් සහ පඩිපෙළ නිර්මාණ. ඔබේ නිවසට ගැළපෙන මෝස්තරය තෝරාගන්න.">
 <div class="container">
 
 <div class="section-head reveal">
@@ -1511,7 +1548,7 @@ data-speech="සාලයයි කෑම කාමරයයි ලස්සන�
 </div>
 </section>
 
-<section class="contact" id="contact">
+<section class="contact" id="contact" data-explain="ඔබේ නිවසේ දොර, ජනෙල්, පැන්ට්‍රි හෝ පඩිපෙළ වැඩේ ගැන විස්තර දැනගන්න දැන්ම 076 718 1514 WhatsApp හරහා සම්බන්ධ වෙන්න.">
 <div class="container">
 
 <div class="contact-panel reveal">
@@ -1555,14 +1592,15 @@ data-speech="සාලයයි කෑම කාමරයයි ලස්සන�
 
 <div class="sp-message" id="sp-message">
 ආයුබෝවන්! 👋<br>
-මම S.P Wood Craftsmen සහායකයා.
-පහළට Scroll කරලා අපේ 3D වැඩමුළුව බලන්න!
+පහළට Scroll කරන්න — මම එක් එක් නිර්මාණය හදන විදිහ පැහැදිලි කරන්නම්!
 </div>
 
 <div class="sp-scene">
 
 <div class="sp-shadow"></div>
 
+<div class="sp-3d-tilt" id="sp-3d-tilt">
+<div class="sp-float-inner">
 <div class="sp-person">
 
 <div class="sp-helmet"></div>
@@ -1603,10 +1641,13 @@ data-speech="සාලයයි කෑම කාමරයයි ලස්සන�
 
 </div>
 </div>
+</div>
+
+</div>
 
 <div class="sp-controls">
 <button id="sp-talk-button" onclick="spSpeak()">
-🔊 මේ ගැන අහන්න
+🔊 පැහැදිලි කිරීම අහන්න
 </button>
 </div>
 
@@ -1646,7 +1687,7 @@ observer.observe(el);
 });
 
 /* ===================================================
-   APPLE-STYLE SCROLLYTELLING & 3D ASSISTANT SYNC
+   SCROLL-DRIVEN 3D CHARACTER DESCENT & EXPLANATION
 =================================================== */
 
 const scrollyCards=document.querySelectorAll('.scrolly-card');
@@ -1657,14 +1698,31 @@ const hudCounter=document.getElementById('hud-counter');
 const hudProgress=document.getElementById('hud-progress');
 
 const spAssistant=document.getElementById('sp-assistant');
+const spTilt=document.getElementById('sp-3d-tilt');
 const spMessage=document.getElementById('sp-message');
 const spButton=document.getElementById('sp-talk-button');
 
 let activeStep=0;
+let spIsSpeaking=false;
+let scrollStopTimer=null;
 let currentContextSpeech=
-'ආයුබෝවන්! S P Wood Craftsmen වෙත ඔබව සාදරයෙන් පිළිගන්නවා. '+
-'අපි 1996 සිට බළන්ගොඩ ප්‍රදේශයේ තේක්ක ලී නිර්මාණ සිදු කරනවා. '+
-'පහළට Scroll කරලා අපේ 3D වැඩමුළුවේ දොරවල්, ජනෙල්, පැන්ට්‍රි කබඩ් සහ පඩිපෙළ නිමවන ආකාරය බලන්න!';
+'ආයුබෝවන්! මම S.P Wood Craftsmen 3D ශිල්පියා. '+
+'පහළට Scroll කරනකොට මම එක් එක් නිර්මාණය හදන විදිහ පැහැදිලි කරලා දෙන්නම්!';
+
+function updateAssistantBubble(text){
+if(!text || text===currentContextSpeech && spMessage.textContent===text) return;
+currentContextSpeech=text;
+if(!spIsSpeaking && !spAssistant.classList.contains('hidden')){
+spMessage.textContent=text;
+spMessage.classList.add('pop');
+spAssistant.classList.add('pointing');
+clearTimeout(window._spPopTimer);
+window._spPopTimer=setTimeout(()=>{
+spMessage.classList.remove('pop');
+spAssistant.classList.remove('pointing');
+},1400);
+}
+}
 
 function activateScrollyStep(index){
 if(index===activeStep && scrollyCards[index].classList.contains('active')) return;
@@ -1693,16 +1751,83 @@ if(card){
 hudTitle.textContent=card.dataset.hud;
 hudCounter.textContent=String(index+1).padStart(2,'0')+' / 06';
 hudProgress.style.width=((index+1)/6*100)+'%';
+updateAssistantBubble(card.dataset.speech);
+}
+}
 
-currentContextSpeech=card.dataset.speech;
-if(!spIsSpeaking && !spAssistant.classList.contains('hidden')){
-spMessage.textContent=currentContextSpeech;
-spAssistant.classList.add('pointing');
-clearTimeout(window._spPointTimer);
-window._spPointTimer=setTimeout(()=>spAssistant.classList.remove('pointing'),2200);
+/* Smoothly descends & tilts the 3D character as the page scrolls down */
+let lastScrollY=window.scrollY;
+let tickScheduled=false;
+
+function handleScroll3D(){
+const scrollY=window.scrollY;
+const maxScroll=Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+const progress=Math.min(1, Math.max(0, scrollY / maxScroll));
+const deltaY=scrollY - lastScrollY;
+lastScrollY=scrollY;
+
+if(!spAssistant.classList.contains('hidden')){
+const isMobile=window.innerWidth<=560;
+const baseScale=isMobile ? 0.76 : 1;
+
+/* Descends smoothly from top-left area down toward the lower-left as user scrolls down */
+const startTop=isMobile ? 86 : 96;
+const endBottom=isMobile ? 14 : 18;
+const viewportH=window.innerHeight;
+const assistantH=275 * baseScale;
+const maxTravelTop=Math.max(0, (viewportH - assistantH - endBottom) - startTop);
+
+/* Eased downward descent driven by scroll progress */
+const eased=1 - Math.pow(1 - progress, 1.35);
+const currentTop=startTop + (maxTravelTop * eased);
+
+spAssistant.style.bottom='auto';
+spAssistant.style.top=currentTop.toFixed(1)+'px';
+spAssistant.style.transform=`scale(${baseScale})`;
+
+/* 3D body turn & forward lean while scrolling down */
+const leanX=Math.max(-14, Math.min(14, deltaY * 0.45));
+const yawY=Math.sin(progress * Math.PI * 2) * 16;
+spTilt.style.transform=`rotateX(${leanX.toFixed(1)}deg) rotateY(${yawY.toFixed(1)}deg)`;
+
+if(Math.abs(deltaY) > 1){
+spAssistant.classList.add('scrolling-active');
+clearTimeout(scrollStopTimer);
+scrollStopTimer=setTimeout(()=>{
+spAssistant.classList.remove('scrolling-active');
+spTilt.style.transform='rotateX(0deg) rotateY(0deg)';
+},220);
 }
 }
+
+/* Also check section-level explanations outside #workshop */
+const workshopSec=document.getElementById('workshop');
+const inWorkshop=workshopSec &&
+scrollY + viewportH * 0.65 >= workshopSec.offsetTop &&
+scrollY + viewportH * 0.25 <= workshopSec.offsetTop + workshopSec.offsetHeight;
+
+if(!inWorkshop){
+const explainSections=document.querySelectorAll('[data-explain]');
+explainSections.forEach(sec=>{
+const rect=sec.getBoundingClientRect();
+if(rect.top < viewportH * 0.55 && rect.bottom > viewportH * 0.25){
+updateAssistantBubble(sec.dataset.explain);
 }
+});
+}
+
+tickScheduled=false;
+}
+
+window.addEventListener('scroll',()=>{
+if(!tickScheduled){
+window.requestAnimationFrame(handleScroll3D);
+tickScheduled=true;
+}
+},{passive:true});
+
+window.addEventListener('resize',handleScroll3D);
+handleScroll3D();
 
 const stepObserver=new IntersectionObserver((entries)=>{
 entries.forEach(entry=>{
@@ -1736,8 +1861,6 @@ scrollyCards[idx].scrollIntoView({behavior:'smooth',block:'center'});
    3D CARPENTER VOICE ASSISTANT
 ================================= */
 
-let spIsSpeaking=false;
-
 function spSpeak(){
 
 if(!('speechSynthesis' in window)){
@@ -1749,7 +1872,7 @@ if(spIsSpeaking){
 speechSynthesis.cancel();
 spIsSpeaking=false;
 spAssistant.classList.remove('talking');
-spButton.innerText='🔊 මේ ගැන අහන්න';
+spButton.innerText='🔊 පැහැදිලි කිරීම අහන්න';
 return;
 }
 
@@ -1802,7 +1925,7 @@ if(document.hidden && 'speechSynthesis' in window){
 speechSynthesis.cancel();
 spIsSpeaking=false;
 spAssistant.classList.remove('talking');
-spButton.innerText='🔊 මේ ගැන අහන්න';
+spButton.innerText='🔊 පැහැදිලි කිරීම අහන්න';
 }
 });
 </script>
