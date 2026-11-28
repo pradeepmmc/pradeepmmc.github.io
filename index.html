@@ -35,6 +35,7 @@
       font-family: 'Plus Jakarta Sans', 'Noto Sans Sinhala', sans-serif;
       line-height: 1.65;
       overflow-x: hidden;
+      cursor: default;
     }
 
     header {
@@ -329,69 +330,51 @@
       gap: 8px;
     }
 
-    /* Floating Craftsman Character Guide with Speech Bubble */
-    .craftsman-guide {
+    /* Mouse Following Character Animation */
+    #mouseFollower {
       position: fixed;
-      z-index: 150;
-      right: clamp(15px, 3vw, 40px);
-      bottom: 85px;
-      width: 140px;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      width: 110px;
       pointer-events: none;
-      transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      filter: drop-shadow(0 15px 25px rgba(0,0,0,0.5));
+      transform: translate(-50%, -100%);
+      transition: transform 0.05s ease-out;
+      filter: drop-shadow(0 12px 20px rgba(0,0,0,0.6));
     }
 
-    .guide-bubble {
+    .follower-bubble {
       position: absolute;
-      right: 130px;
-      bottom: 20px;
-      width: min(260px, 60vw);
-      padding: 12px 16px;
+      right: 110px;
+      top: 0;
+      width: 230px;
+      padding: 10px 14px;
       border: 1px solid rgba(240,207,147,0.65);
       border-radius: 15px 15px 4px 15px;
-      background: rgba(18,13,9,0.96);
+      background: rgba(18,13,9,0.95);
       color: #f5efe6;
       font-family: 'Noto Sans Sinhala', sans-serif;
-      font-size: 12.5px;
-      line-height: 1.6;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-      backdrop-filter: blur(10px);
-      animation: bubblePop 0.3s ease;
+      font-size: 11.5px;
+      line-height: 1.55;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+      backdrop-filter: blur(8px);
     }
 
-    .guide-bubble strong {
+    .follower-bubble strong {
       display: block;
       color: var(--gold-light);
-      font-size: 12px;
-      margin-bottom: 4px;
+      font-size: 11.5px;
+      margin-bottom: 3px;
     }
 
-    .craftsman-img {
+    .follower-img {
       width: 100%;
       height: auto;
       display: block;
-      animation: floatChar 3s ease-in-out infinite;
     }
 
-    @keyframes floatChar {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
-    }
-
-    @keyframes bubblePop {
-      0% { transform: scale(0.8); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
-    }
-
-    @media (max-width: 700px) {
-      .craftsman-guide { right: 10px; width: 110px; bottom: 75px; }
-      .guide-bubble { right: 100px; width: min(210px, 55vw); font-size: 11px; padding: 10px; }
-      .scene-body { padding: 18px; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .craftsman-guide, .craftsman-img, .guide-bubble { animation: none !important; }
-      html { scroll-behavior: auto; }
+    @media (max-width: 768px) {
+      #mouseFollower { display: none; } /* Mobile වලදී මවුස් නැති නිසා අක්‍රීය කරයි */
     }
   </style>
 </head>
@@ -417,7 +400,7 @@
   <section class="hero" id="top">
     <div class="badge">BALANGODA • EST. 1996 • 100% SEASONED TEAK</div>
     <h1>සම්ප්‍රදායික තේක්ක වඩු කලාව සහ නවීන වීඩියෝ නිර්මාණකරණය</h1>
-    <p>පිටුව පහළට scroll කරන විට අපේ වඩු කාර්මිකයා ඔබට එක් එක් ලී නිර්මාණය සකස් කරන ආකාරය පැහැදිලි කරයි.</p>
+    <p>මවුස් එක ගෙන යන තැනට අපේ වඩු කාර්මිකයා වේගයෙන් දුවගෙන විත් විස්තර පෙන්වයි!</p>
   </section>
 
   <main class="scenes-container" id="scenes">
@@ -569,15 +552,14 @@
     </div>
   </section>
 
-  <!-- Floating Character Guide with Real Image -->
-  <aside class="craftsman-guide" id="craftsmanGuide" aria-label="S.P Wood Craftsmen guide">
-    <div class="guide-bubble" id="guideBubble" aria-live="polite">
+  <!-- Mouse Following Character -->
+  <div id="mouseFollower">
+    <div class="follower-bubble" id="followerBubble">
       <strong>S.P WOOD CRAFTSMEN</strong>
-      ආයුබෝවන්! අපගේ තේක්ක නිර්මාණ බලන්න මා සමඟ පහළට යන්න.
+      මවුස් එක ගෙන යන තැනට මම එනවා! වීඩියෝ නරඹන්න.
     </div>
-    <!-- ඔබ එවූ රූපය මෙහි යොදා ඇත -->
-    <img src="craftsman.png" alt="Carpenter Guide" class="craftsman-img">
-  </aside>
+    <img src="craftsman.png" alt="Carpenter" class="follower-img">
+  </div>
 
   <footer id="contact">
     <p><strong>S.P Wood Craftsmen</strong> — බළන්ගොඩ | 1996 සිට විශ්වාසනීය තේක්ක ලී නිර්මාණ</p>
@@ -591,24 +573,49 @@
   <script>
     const cards = [...document.querySelectorAll('.scene-card')];
     const videos = [...document.querySelectorAll('.scroll-video')];
-    const guideBubble = document.getElementById('guideBubble');
+    const follower = document.getElementById('mouseFollower');
+    const followerBubble = document.getElementById('followerBubble');
 
     const guideMessages = [
-      ['ප්‍රධාන තේක්ක දොරවල්', 'මෙන්න අපේ ප්‍රධාන තේක්ක දොර සහ උළුවහු සවිකරන ආකාරය. 100% කල්පවත්නා තේක්ක ලීයෙන් නිම කර ඇත.'],
-      ['නවීන පැන්ට්‍රි කබඩ්', 'මුළුතැන්ගෙයට අලංකාරය ගෙනෙන පැන්ට්‍රි කබඩ් පද්ධතියක්. මිනුම් අනුව නිමවා ඇත.'],
-      ['තේක්ක පඩිපෙළ', 'ශක්තිමත් තේක්ක ලී පඩි සහ අලංකාර අත්වැට සමඟ පඩිපෙළ නිර්මාණය.'],
-      ['ලී පාටිෂන් (Partitions)', 'නිවසේ ඉඩකඩ අලංකාරව බෙදා වෙන් කිරීමට නවීන තේක්ක පාටිෂන් ක්‍රමයක්.'],
-      ['ඇඳුම් අල්මාරි (Wardrobes)', 'දිගු කල් පවතින ස්වභාවික තේක්ක නිමාවකින් යුත් ඇඳුම් අල්මාරි නිර්මාණය.'],
-      ['වහල සහ ජනෙල් වැඩ', 'නිවසේ වහල සැකිලි, ජනෙල් පියන් සහ වාතාශ්‍රය ලැබෙන ලූවර් වැඩ.']
+      ['ප්‍රධාන තේක්ක දොරවල්', 'මෙන්න අපේ ප්‍රධාන තේක්ක දොර සහ උළුවහු සවිකරන ආකාරය.'],
+      ['නවීන පැන්ට්‍රි කබඩ්', 'මුළුතැන්ගෙයට අලංකාරය ගෙනෙන පැන්ට්‍රි කබඩ් පද්ධතියක්.'],
+      ['තේක්ක පඩිපෙළ', 'ශක්තිමත් තේක්ක ලී පඩි සහ අලංකාර අත්වැට නිර්මාණය.'],
+      ['ලී පාටිෂන් (Partitions)', 'නිවසේ ඉඩකඩ අලංකාරව බෙදා වෙන් කිරීමට තේක්ක පාටිෂන් ක්‍රමයක්.'],
+      ['ඇඳුම් අල්මාරි (Wardrobes)', 'ස්වභාවික තේක්ක නිමාවකින් යුත් ඇඳුම් අල්මාරි නිර්මාණය.'],
+      ['වහල සහ ජනෙල් වැඩ', 'නිවසේ වහල සැකිලි, ජනෙල් පියන් සහ ලූවර් වැඩ.']
     ];
 
-    function setGuideMessage(index) {
+    function setFollowerMessage(index) {
       const item = guideMessages[index];
-      if (!item || !guideBubble) return;
-      guideBubble.innerHTML = '<strong>' + item[0] + '</strong>' + item[1];
+      if (!item || !followerBubble) return;
+      followerBubble.innerHTML = '<strong>' + item[0] + '</strong>' + item[1];
     }
 
-    // Video play/pause on scroll intersection
+    // Mouse Follower Physics (Smooth chasing effect)
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+    let followerX = mouseX;
+    let followerY = mouseY;
+
+    window.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+
+    function animateFollower() {
+      // Lerp (Linear Interpolation) for smooth following speed
+      followerX += (mouseX - followerX) * 0.12;
+      followerY += (mouseY - followerY) * 0.12;
+      
+      if (follower) {
+        follower.style.left = followerX + 'px';
+        follower.style.top = followerY + 'px';
+      }
+      requestAnimationFrame(animateFollower);
+    }
+    animateFollower();
+
+    // Video play/pause and message updater on scroll
     const videoObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         const video = entry.target.querySelector('video');
@@ -626,9 +633,8 @@
             playAttempt.catch(() => {});
           }
 
-          // Update character guide message based on active card
           const index = cards.indexOf(entry.target);
-          if (index >= 0) setGuideMessage(index);
+          if (index >= 0) setFollowerMessage(index);
 
         } else {
           entry.target.classList.remove('active');
@@ -639,7 +645,6 @@
 
     cards.forEach((card) => videoObserver.observe(card));
 
-    // Pause videos when switching tabs
     document.addEventListener('visibilitychange', () => {
       if (document.hidden) videos.forEach((video) => video.pause());
     });
