@@ -327,6 +327,179 @@
       align-items: center;
       gap: 8px;
     }
+
+    /* Floating 3D craftsman guide */
+    .craftsman-guide {
+      position: fixed;
+      z-index: 150;
+      right: clamp(12px, 3vw, 42px);
+      top: var(--guide-top, 58vh);
+      width: 142px;
+      pointer-events: none;
+      transition: top .45s ease;
+      filter: drop-shadow(0 18px 18px rgba(0,0,0,.45));
+    }
+    .guide-bubble {
+      position: absolute;
+      right: 92px;
+      top: 2px;
+      width: min(245px, 55vw);
+      padding: 11px 14px;
+      border: 1px solid rgba(240,207,147,.65);
+      border-radius: 15px 15px 4px 15px;
+      background: rgba(18,13,9,.94);
+      color: #f5efe6;
+      font-family: 'Noto Sans Sinhala', sans-serif;
+      font-size: 12px;
+      line-height: 1.65;
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+      backdrop-filter: blur(10px);
+    }
+    .guide-bubble strong {
+      display: block;
+      color: var(--gold-light);
+      font-size: 11px;
+      margin-bottom: 3px;
+    }
+    .guide-person {
+      position: relative;
+      width: 100px;
+      height: 178px;
+      margin-left: auto;
+      transform-origin: 50% 90%;
+      animation: guide-bob .55s ease-in-out infinite alternate;
+    }
+    .guide-head {
+      position: absolute;
+      z-index: 3;
+      top: 3px;
+      left: 31px;
+      width: 43px;
+      height: 47px;
+      border-radius: 46% 46% 43% 43%;
+      background: linear-gradient(120deg,#f7c99f 5%,#d99565 58%,#9f5e3e 100%);
+      box-shadow: inset -5px -3px 7px rgba(75,34,16,.25), inset 4px 3px 6px rgba(255,255,255,.4);
+    }
+    .guide-hair {
+      position: absolute;
+      z-index: 4;
+      top: 0;
+      left: 29px;
+      width: 46px;
+      height: 20px;
+      border-radius: 50% 50% 25% 20%;
+      background: linear-gradient(135deg,#302016,#090706);
+      transform: rotate(-5deg);
+    }
+    .guide-face {
+      position: absolute;
+      top: 21px;
+      left: 10px;
+      display: flex;
+      gap: 12px;
+    }
+    .guide-face i {
+      width: 5px;
+      height: 6px;
+      border-radius: 50%;
+      background: #24140e;
+    }
+    .guide-smile {
+      position: absolute;
+      left: 18px;
+      top: 32px;
+      width: 10px;
+      height: 5px;
+      border-bottom: 2px solid #793f31;
+      border-radius: 0 0 10px 10px;
+    }
+    .guide-body {
+      position: absolute;
+      top: 48px;
+      left: 21px;
+      width: 63px;
+      height: 77px;
+      border-radius: 17px 17px 10px 10px;
+      background: linear-gradient(110deg,#d6a45d,#8e542b 55%,#57331e);
+      box-shadow: inset 7px 0 8px rgba(255,255,255,.16), inset -8px 0 10px rgba(0,0,0,.25);
+    }
+    .guide-apron {
+      position: absolute;
+      top: 58px;
+      left: 32px;
+      width: 43px;
+      height: 64px;
+      border-radius: 8px 8px 5px 5px;
+      background: linear-gradient(100deg,#59402c,#21170f);
+      border: 1px solid rgba(240,207,147,.4);
+      clip-path: polygon(15% 0,85% 0,100% 100%,0 100%);
+    }
+    .guide-arm {
+      position: absolute;
+      z-index: 1;
+      top: 57px;
+      width: 15px;
+      height: 65px;
+      border-radius: 12px;
+      background: linear-gradient(90deg,#c98b59,#f0bd8e,#9b6240);
+      transform-origin: top center;
+    }
+    .guide-arm.left { left: 12px; animation: arm-left .55s ease-in-out infinite alternate; }
+    .guide-arm.right { right: 5px; animation: arm-right .55s ease-in-out infinite alternate; }
+    .guide-leg {
+      position: absolute;
+      top: 119px;
+      width: 19px;
+      height: 48px;
+      border-radius: 5px 5px 8px 8px;
+      background: linear-gradient(90deg,#26374b,#506783,#182536);
+      transform-origin: top center;
+    }
+    .guide-leg.left { left: 32px; animation: leg-left .55s ease-in-out infinite alternate; }
+    .guide-leg.right { left: 56px; animation: leg-right .55s ease-in-out infinite alternate; }
+    .guide-shoe {
+      position: absolute;
+      bottom: -3px;
+      left: -5px;
+      width: 29px;
+      height: 11px;
+      border-radius: 10px 8px 5px 5px;
+      background: linear-gradient(#e8d8c4,#8b735c);
+    }
+    .guide-tool {
+      position: absolute;
+      right: -2px;
+      top: 93px;
+      width: 24px;
+      height: 7px;
+      border-radius: 4px;
+      background: #d7b36e;
+      transform: rotate(-35deg);
+      box-shadow: 0 0 8px rgba(240,207,147,.25);
+    }
+    .guide-shadow {
+      width: 76px;
+      height: 13px;
+      margin: -1px 5px 0 auto;
+      border-radius: 50%;
+      background: rgba(0,0,0,.42);
+      filter: blur(5px);
+    }
+    @keyframes guide-bob { from { transform: translateY(0) rotate(-1deg); } to { transform: translateY(-5px) rotate(1deg); } }
+    @keyframes arm-left { from { transform: rotate(22deg); } to { transform: rotate(-22deg); } }
+    @keyframes arm-right { from { transform: rotate(-22deg); } to { transform: rotate(22deg); } }
+    @keyframes leg-left { from { transform: rotate(-15deg); } to { transform: rotate(15deg); } }
+    @keyframes leg-right { from { transform: rotate(15deg); } to { transform: rotate(-15deg); } }
+    @media (max-width: 700px) {
+      .craftsman-guide { right: 5px; transform: scale(.76); transform-origin: right center; }
+      .guide-bubble { right: 75px; width: min(205px, 54vw); font-size: 10px; }
+      .scene-body { padding: 18px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .guide-person, .guide-arm, .guide-leg { animation: none !important; }
+      html { scroll-behavior: auto; }
+    }
+
   </style>
 </head>
 <body>
@@ -503,6 +676,24 @@
     </div>
   </section>
 
+
+  <aside class="craftsman-guide" id="craftsmanGuide" aria-label="S.P Wood Craftsmen guide">
+    <div class="guide-bubble" id="guideBubble" aria-live="polite">
+      <strong>S.P WOOD CRAFTSMEN</strong>
+      ආයුබෝවන්! අපගේ තේක්ක නිර්මාණ බලන්න මා සමඟ පහළට එන්න.
+    </div>
+    <div class="guide-person">
+      <div class="guide-hair"></div>
+      <div class="guide-head"><div class="guide-face"><i></i><i></i></div><div class="guide-smile"></div></div>
+      <div class="guide-arm left"></div><div class="guide-arm right"></div>
+      <div class="guide-body"></div><div class="guide-apron"></div>
+      <div class="guide-leg left"><span class="guide-shoe"></span></div>
+      <div class="guide-leg right"><span class="guide-shoe"></span></div>
+      <div class="guide-tool"></div>
+    </div>
+    <div class="guide-shadow"></div>
+  </aside>
+
   <footer id="contact">
     <p><strong>S.P Wood Craftsmen</strong> — බළන්ගොඩ | 1996 සිට විශ්වාසනීය තේක්ක ලී නිර්මාණ</p>
     <p style="margin-top:6px;">නිවසටම පැමිණ මිනුම් ලබාගැනීම සහ ඇස්තමේන්තු සඳහා අප හා සම්බන්ධ වන්න.</p>
@@ -513,22 +704,90 @@
   </a>
 
   <script>
-    const cards = document.querySelectorAll('.scene-card');
-    const observer = new IntersectionObserver((entries) => {
+    const cards = [...document.querySelectorAll('.scene-card')];
+    const videos = [...document.querySelectorAll('.scroll-video')];
+    const guide = document.getElementById('craftsmanGuide');
+    const guideBubble = document.getElementById('guideBubble');
+
+    const guideMessages = [
+      ['ප්‍රධාන තේක්ක දොරවල්', 'අපි තෝරාගත් තේක්ක ලීයෙන් දොර සහ උළුවහු නිවැරදිව සකස් කර සවි කරනවා.'],
+      ['නවීන පැන්ට්‍රි', 'ඔබගේ මුළුතැන්ගෙයට ගැළපෙන පැන්ට්‍රි කබඩ් මිනුම් අනුව නිර්මාණය කරනවා.'],
+      ['තේක්ක පඩිපෙළ', 'ශක්තිමත් පඩි සහ අලංකාර අත්වැට සමඟ පඩිපෙළ නිර්මාණය කරනවා.'],
+      ['ලී පාටිෂන්', 'නිවසේ අභ්‍යන්තරයට ගැළපෙන අලංකාර ලී පාටිෂන් සකස් කරනවා.'],
+      ['ඇඳුම් අල්මාරි', 'ඔබට අවශ්‍ය ප්‍රමාණයට සහ සැලසුමට අනුව අල්මාරි නිර්මාණය කරනවා.'],
+      ['වහල සහ ජනෙල්', 'වහල සැකිලි, ජනෙල් සහ ලූවර් වැඩත් සැලකිල්ලෙන් නිම කරනවා.']
+    ];
+
+    function setGuideMessage(index) {
+      const item = guideMessages[index];
+      if (!item || !guideBubble) return;
+      guideBubble.innerHTML = '<strong>' + item[0] + '</strong>' + item[1];
+    }
+
+    // Play the video belonging to the section currently in view.
+    // Muted inline playback is used because browsers restrict audible autoplay.
+    const videoObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         const video = entry.target.querySelector('video');
         if (!video) return;
+
         if (entry.isIntersecting) {
           entry.target.classList.add('active');
-          video.play().catch(() => {});
+          videos.forEach((otherVideo) => {
+            if (otherVideo !== video) otherVideo.pause();
+          });
+          video.muted = true;
+          video.playsInline = true;
+          const playAttempt = video.play();
+          if (playAttempt && typeof playAttempt.catch === 'function') {
+            playAttempt.catch(() => {
+              // The visible video still has native controls if autoplay is blocked.
+            });
+          }
         } else {
           entry.target.classList.remove('active');
           video.pause();
         }
       });
-    }, { threshold: 0.45 });
+    }, { threshold: 0.12, rootMargin: '-8% 0px -12% 0px' });
 
-    cards.forEach((card) => observer.observe(card));
+    cards.forEach((card) => videoObserver.observe(card));
+
+    // Keep playback paused when the visitor changes browser tabs.
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) videos.forEach((video) => video.pause());
+    });
+
+    // Update the guide's Sinhala explanation according to the active scene.
+    const messageObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const index = cards.indexOf(entry.target);
+          if (index >= 0) setGuideMessage(index);
+        }
+      });
+    }, { threshold: 0.25 });
+
+    cards.forEach((card) => messageObserver.observe(card));
+
+    // The guide walks down the side of the page as the visitor scrolls.
+    let scrollTicking = false;
+    function updateGuidePosition() {
+      if (!guide) return;
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = maxScroll > 0 ? window.scrollY / maxScroll : 0;
+      const top = 18 + progress * 53;
+      guide.style.setProperty('--guide-top', top + 'vh');
+      scrollTicking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!scrollTicking) {
+        window.requestAnimationFrame(updateGuidePosition);
+        scrollTicking = true;
+      }
+    }, { passive: true });
+    window.addEventListener('resize', updateGuidePosition);
+    updateGuidePosition();
   </script>
 
 </body>
